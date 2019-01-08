@@ -21,7 +21,6 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
-InstallPackDemo/¾§´´MES-SetupFiles
 
 # Visual Studio 2015 cache/options directory
 .vs/
@@ -260,3 +259,5 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/InstallPackDemo/æ™¶åˆ›MES-SetupFiles
+/InstallPackDemo/æ™¶åˆ›MES-cache
