@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<DOCUMENT Type="Advanced Installer" CreateVersion="15.2" version="15.2" PreviousModules="professional" Modules="enterprise" RootPath="." Language="en" Id="{43CBE1E3-3979-47B3-89EA-8186770E02AB}">
+<DOCUMENT Type="Advanced Installer" CreateVersion="15.2" version="15.2" Modules="enterprise" RootPath="." Language="en" Id="{EF7977E8-195B-4CF6-91C2-EDFD1C8BD52D}">
   <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
-    <ROW Name="HiddenItems" Value="AppXAppDetailsComponent;AppXCapabilitiesComponent;AppXDependenciesComponent;AppXProductDetailsComponent;AppXVisualAssetsComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent"/>
+    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;SccmComponent;ActSyncAppComponent"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
-    <ROW Property="AI_CLEAN_RESOURCES_DISABLE_UPGRADE" Value="1"/>
-    <ROW Property="AI_CLEAN_RESOURCES_UNINSTALL" Value="1"/>
-    <ROW Property="AI_CLEAN_RESOURCES_USER_PROMPT_BASIC_UI" Value="0"/>
-    <ROW Property="AI_CLEAN_RESOURCES_USER_PROMPT_FULL_UI" Value="0"/>
     <ROW Property="AI_FINDEXE_TITLE" Value="Select the installation package for [|ProductName]" ValueLocId="AI.Property.FindExeTitle"/>
-    <ROW Property="AI_ThemeStyle" Value="aero" MultiBuildValue="DefaultBuild:style1" MsiKey="AI_ThemeStyle"/>
+    <ROW Property="AI_ThemeStyle" Value="aero" MultiBuildValue="DefaultBuild:style5blue" MsiKey="AI_ThemeStyle"/>
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
     <ROW Property="ARPNOREPAIR" MultiBuildValue="DefaultBuild:1"/>
     <ROW Property="ARPPRODUCTICON" Value="GoogleChrome.exe" Type="8"/>
     <ROW Property="Manufacturer" Value="浙江晶创自动化设备有限公司"/>
-    <ROW Property="ProductCode" Value="1033:{6D42F1F1-067E-431E-B8E0-E8C96FBB9B05} 2052:{BFF5E85C-488C-47BD-8D99-61C5538BB524} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{D6C656FF-F7CA-49F8-A1CB-DBD165B58A90} 2052:{904788D4-FF44-4F67-A9DC-4000880F4010} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="晶创MES"/>
-    <ROW Property="ProductVersion" Value="1.0.8" Type="32"/>
+    <ROW Property="ProductVersion" Value="1.1.0" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
-    <ROW Property="UpgradeCode" Value="{1E568F26-47F6-4562-BE88-AA48A2699B19}"/>
+    <ROW Property="UpgradeCode" Value="{480B78A1-0CBF-46F1-9465-42F31545A9B9}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
     <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
     <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
@@ -37,184 +33,272 @@
     <ROW Directory="CHBrowser_Dir" Directory_Parent="APPDIR" DefaultDir="CHBROW~1|CHBrowser"/>
     <ROW Directory="Cache_Dir" Directory_Parent="BrowserCache_Dir" DefaultDir="Cache"/>
     <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="Dictionaries_Dir" Directory_Parent="userData_Dir" DefaultDir="DICTIO~1|Dictionaries"/>
     <ROW Directory="GPUCache_Dir" Directory_Parent="BrowserCache_Dir" DefaultDir="GPUCache"/>
-    <ROW Directory="ProgramFilesFolder" Directory_Parent="TARGETDIR" DefaultDir="PROGRA~1|ProgramFilesFolder" IsPseudoRoot="1"/>
+    <ROW Directory="LocalStorage_Dir" Directory_Parent="BrowserCache_Dir" DefaultDir="LOCALS~1|Local Storage"/>
     <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
     <ROW Directory="StartMenuFolder" Directory_Parent="TARGETDIR" DefaultDir="STARTM~1|StartMenuFolder" IsPseudoRoot="1"/>
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
-    <ROW Directory="assets_Dir" Directory_Parent="APPDIR" DefaultDir="assets"/>
-    <ROW Directory="css_Dir" Directory_Parent="assets_Dir" DefaultDir="css"/>
-    <ROW Directory="images_Dir" Directory_Parent="assets_Dir" DefaultDir="images"/>
-    <ROW Directory="js_Dir" Directory_Parent="assets_Dir" DefaultDir="js"/>
+    <ROW Directory="leveldb_Dir" Directory_Parent="LocalStorage_Dir" DefaultDir="leveldb"/>
     <ROW Directory="locales_Dir" Directory_Parent="APPDIR" DefaultDir="locales"/>
+    <ROW Directory="old_Cache_000_Dir" Directory_Parent="BrowserCache_Dir" DefaultDir="OLD_CA~1|old_Cache_000"/>
+    <ROW Directory="old_GPUCache_000_Dir" Directory_Parent="BrowserCache_Dir" DefaultDir="OLD_GP~1|old_GPUCache_000"/>
     <ROW Directory="swiftshader_Dir" Directory_Parent="APPDIR" DefaultDir="SWIFTS~1|swiftshader"/>
     <ROW Directory="userData_Dir" Directory_Parent="CHBrowser_Dir" DefaultDir="userData"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
-    <ROW Component="AI_ExePath" ComponentId="{B03D2667-AD52-45FD-8A1C-A68F21DEEBDC}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
-    <ROW Component="B35B3203FEB4CFFA576A27CB835D3E6" ComponentId="{368B9CCB-1698-4302-BB32-684BD852BC9C}" Directory_="APPDIR" Attributes="4" KeyPath="B35B3203FEB4CFFA576A27CB835D3E6" Options="2"/>
-    <ROW Component="CefSharp.BrowserSubprocess.Core.dll" ComponentId="{1F26724D-C772-474E-8A6E-AE145F2E2637}" Directory_="APPDIR" Attributes="0" KeyPath="CefSharp.BrowserSubprocess.Core.dll"/>
-    <ROW Component="CefSharp.BrowserSubprocess.exe" ComponentId="{4874041C-ED6D-49E7-BA19-2CDA9A3B1C19}" Directory_="APPDIR" Attributes="0" KeyPath="CefSharp.BrowserSubprocess.exe"/>
-    <ROW Component="CefSharp.Core.dll" ComponentId="{8B094836-C67B-482B-92AE-135FEEEE5C59}" Directory_="APPDIR" Attributes="0" KeyPath="CefSharp.Core.dll"/>
-    <ROW Component="CefSharp.WinForms.dll" ComponentId="{D74233A8-8089-46DD-88C2-85AC0F51FAFB}" Directory_="APPDIR" Attributes="0" KeyPath="CefSharp.WinForms.dll"/>
-    <ROW Component="CefSharp.dll" ComponentId="{AEB8B776-5C2C-4F3C-80B5-A529E7D73825}" Directory_="APPDIR" Attributes="0" KeyPath="CefSharp.dll"/>
-    <ROW Component="GoogleChrome.exe" ComponentId="{7AF71CB4-0D36-40EA-864D-E0B8D94E418F}" Directory_="APPDIR" Attributes="0" KeyPath="GoogleChrome.exe"/>
-    <ROW Component="LogData" ComponentId="{497DF28E-9445-4403-AF44-A894168D480F}" Directory_="CHBrowser_Dir" Attributes="0" KeyPath="LogData" Type="0"/>
-    <ROW Component="ManagedWifi.dll" ComponentId="{6CC77B0F-E4EF-4421-8054-14F6A66DE31C}" Directory_="APPDIR" Attributes="0" KeyPath="ManagedWifi.dll"/>
-    <ROW Component="ProductInformation" ComponentId="{8D09E512-2760-4B5E-996C-96C2C4979615}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
-    <ROW Component="SHORTCUTDIR" ComponentId="{A8220693-21DC-4907-85A8-EAF04B8DC53B}" Directory_="SHORTCUTDIR" Attributes="0"/>
-    <ROW Component="am.pak" ComponentId="{F74260A9-B523-4541-9D6E-8D655A5C4976}" Directory_="locales_Dir" Attributes="0" KeyPath="am.pak" Type="0"/>
-    <ROW Component="bird.png" ComponentId="{8DE0037E-E18E-470C-B239-A674E7E7D6DB}" Directory_="images_Dir" Attributes="0" KeyPath="bird.png" Type="0"/>
-    <ROW Component="cef.pak" ComponentId="{379185A4-FCEC-44E8-992E-39DB903D62AF}" Directory_="APPDIR" Attributes="0" KeyPath="cef.pak" Type="0"/>
-    <ROW Component="chrome_elf.dll" ComponentId="{363EC6D1-8476-4313-B962-A925DE70204F}" Directory_="APPDIR" Attributes="0" KeyPath="chrome_elf.dll"/>
-    <ROW Component="css" ComponentId="{C188E6D4-B81B-4597-A569-4E8C4D3518BF}" Directory_="css_Dir" Attributes="0" KeyPath="css" Type="0"/>
-    <ROW Component="d3dcompiler_47.dll" ComponentId="{798E1D2E-1083-421F-A3A7-EA975F950C76}" Directory_="APPDIR" Attributes="0" KeyPath="d3dcompiler_47.dll"/>
-    <ROW Component="data_0" ComponentId="{AE61FEE6-5B5C-41FB-A4B3-533CD9EF7915}" Directory_="Cache_Dir" Attributes="0" KeyPath="data_0" Type="0"/>
-    <ROW Component="data_0_1" ComponentId="{C4DBF0A5-05C3-435E-A144-24AB4D10D5D1}" Directory_="GPUCache_Dir" Attributes="0" KeyPath="data_0_1" Type="0"/>
-    <ROW Component="error.html" ComponentId="{0011A187-299F-41BD-BCA6-AA410B6EF172}" Directory_="assets_Dir" Attributes="0" KeyPath="error.html" Type="0"/>
-    <ROW Component="jquery1.10.2.js" ComponentId="{4C415C21-26F8-4AE7-B041-EC2A04C35C00}" Directory_="js_Dir" Attributes="0" KeyPath="jquery1.10.2.js" Type="0"/>
-    <ROW Component="libEGL.dll" ComponentId="{41686F65-8147-40A0-ABB4-82CFDBFAB6C9}" Directory_="swiftshader_Dir" Attributes="0" KeyPath="libEGL.dll"/>
-    <ROW Component="libEGL.dll_1" ComponentId="{50A0D5E0-BC28-4236-B301-C674A7C328E5}" Directory_="APPDIR" Attributes="0" KeyPath="libEGL.dll_1"/>
-    <ROW Component="libGLESv2.dll" ComponentId="{0B54E5CC-8B0E-486D-BFE5-F17A692DD5A8}" Directory_="swiftshader_Dir" Attributes="0" KeyPath="libGLESv2.dll"/>
-    <ROW Component="libGLESv2.dll_1" ComponentId="{43099BC0-906F-47F4-A045-317F45313F9F}" Directory_="APPDIR" Attributes="0" KeyPath="libGLESv2.dll_1"/>
-    <ROW Component="libcef.dll" ComponentId="{CFA6556A-ECE6-4018-B3B6-480DAC87DB67}" Directory_="APPDIR" Attributes="0" KeyPath="libcef.dll"/>
-    <ROW Component="log" ComponentId="{A013AFF5-3171-44C2-B3E6-C3A0DE2A961C}" Directory_="BrowserCache_Dir" Attributes="0" KeyPath="log" Type="0"/>
-    <ROW Component="userData" ComponentId="{E2F60CBE-D2C1-47C9-9CAC-48C08595EDB4}" Directory_="userData_Dir" Attributes="0"/>
+    <ROW Component="AI_ExePath" ComponentId="{62C04AD1-DBD7-4BD7-BF43-4554B9CA9D10}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
+    <ROW Component="B35B3203FEB4CFFA576A27CB835D3E6" ComponentId="{A2356D6B-02CF-416C-8060-373982456454}" Directory_="APPDIR" Attributes="4" KeyPath="B35B3203FEB4CFFA576A27CB835D3E6" Options="2"/>
+    <ROW Component="CefSharp.BrowserSubprocess.Core.dll" ComponentId="{291FD167-A1FF-48DE-98B3-1474DD707BA3}" Directory_="APPDIR" Attributes="0" KeyPath="CefSharp.BrowserSubprocess.Core.dll"/>
+    <ROW Component="CefSharp.BrowserSubprocess.exe" ComponentId="{3657C77F-9FE7-486A-BE46-6B77E7A608A5}" Directory_="APPDIR" Attributes="0" KeyPath="CefSharp.BrowserSubprocess.exe"/>
+    <ROW Component="CefSharp.Core.dll" ComponentId="{DCC037A4-14F4-47F6-A268-42A0A1E550E0}" Directory_="APPDIR" Attributes="0" KeyPath="CefSharp.Core.dll"/>
+    <ROW Component="CefSharp.WinForms.dll" ComponentId="{1C0E4D01-A1A2-446E-AC77-40977AAB6879}" Directory_="APPDIR" Attributes="0" KeyPath="CefSharp.WinForms.dll"/>
+    <ROW Component="CefSharp.dll" ComponentId="{1BD323FD-5178-43B1-8A76-2880129950D5}" Directory_="APPDIR" Attributes="0" KeyPath="CefSharp.dll"/>
+    <ROW Component="GoogleChrome.exe" ComponentId="{09B0E7BD-FD5D-4E6C-A8AB-F6010615DD57}" Directory_="APPDIR" Attributes="0" KeyPath="GoogleChrome.exe"/>
+    <ROW Component="LogData" ComponentId="{AB77B647-944D-43B9-A9A3-8FF3038D3B83}" Directory_="CHBrowser_Dir" Attributes="0" KeyPath="LogData" Type="0"/>
+    <ROW Component="ManagedWifi.dll" ComponentId="{F2192678-9C1B-4A86-80B5-83DB32118F3F}" Directory_="APPDIR" Attributes="0" KeyPath="ManagedWifi.dll"/>
+    <ROW Component="ProductInformation" ComponentId="{3EB792A3-2432-444B-A7EE-2DE784366472}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{AD1B1DFC-9C63-4C64-A411-86763B47F0B1}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="am.pak" ComponentId="{4BA0067E-4398-4DC0-8072-1AB23A314BB4}" Directory_="locales_Dir" Attributes="0" KeyPath="am.pak" Type="0"/>
+    <ROW Component="cef.pak" ComponentId="{A6C242FE-450E-4246-9FC0-EF7F3B2DCC9D}" Directory_="APPDIR" Attributes="0" KeyPath="cef.pak" Type="0"/>
+    <ROW Component="chrome_elf.dll" ComponentId="{20849DE6-92DF-4B60-8245-281E6A8F0931}" Directory_="APPDIR" Attributes="0" KeyPath="chrome_elf.dll"/>
+    <ROW Component="d3dcompiler_47.dll" ComponentId="{510A6860-B808-4A0E-981C-C5EF5368DE8F}" Directory_="APPDIR" Attributes="0" KeyPath="d3dcompiler_47.dll"/>
+    <ROW Component="data_0" ComponentId="{6D6178B1-D347-4EA8-8895-1EC012D9AD96}" Directory_="Cache_Dir" Attributes="0" KeyPath="data_0" Type="0"/>
+    <ROW Component="data_0_1" ComponentId="{F6A27728-7EF1-4A6C-BCFE-3344E9FB2E62}" Directory_="GPUCache_Dir" Attributes="0" KeyPath="data_0_1" Type="0"/>
+    <ROW Component="data_0_2" ComponentId="{E32768B8-12C2-4D54-92DA-5A0727385D1D}" Directory_="old_Cache_000_Dir" Attributes="0" KeyPath="data_0_2" Type="0"/>
+    <ROW Component="data_0_3" ComponentId="{36A61677-C667-4B75-A47F-5B5F2AD03834}" Directory_="old_GPUCache_000_Dir" Attributes="0" KeyPath="data_0_3" Type="0"/>
+    <ROW Component="enUS80.bdic" ComponentId="{41AF0893-AF8C-4A30-BF8B-EBC5EE8BCFC2}" Directory_="Dictionaries_Dir" Attributes="0" KeyPath="enUS80.bdic" Type="0"/>
+    <ROW Component="libEGL.dll" ComponentId="{7823BE85-C8A0-48F8-BDB8-F86A73A5842F}" Directory_="APPDIR" Attributes="0" KeyPath="libEGL.dll"/>
+    <ROW Component="libEGL.dll_1" ComponentId="{12F5C91C-B612-444E-A0C7-7ADE0845C46B}" Directory_="swiftshader_Dir" Attributes="0" KeyPath="libEGL.dll_1"/>
+    <ROW Component="libGLESv2.dll" ComponentId="{5F5639A0-D154-4E21-9099-9A2B949CB5EC}" Directory_="APPDIR" Attributes="0" KeyPath="libGLESv2.dll"/>
+    <ROW Component="libGLESv2.dll_1" ComponentId="{6B43C71B-8289-4936-8C30-53C6E9368A8B}" Directory_="swiftshader_Dir" Attributes="0" KeyPath="libGLESv2.dll_1"/>
+    <ROW Component="libcef.dll" ComponentId="{223E7324-9F5A-4563-824E-8F7926C39B85}" Directory_="APPDIR" Attributes="0" KeyPath="libcef.dll"/>
+    <ROW Component="log" ComponentId="{CE3A45BC-E588-4763-A596-D020F2F17233}" Directory_="BrowserCache_Dir" Attributes="0" KeyPath="log" Type="0"/>
+    <ROW Component="log_1" ComponentId="{92522773-BEF9-4801-8D6B-74EEAB10660C}" Directory_="leveldb_Dir" Attributes="0" KeyPath="log_1" Type="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="B35B3203FEB4CFFA576A27CB835D3E6" Title="Visual C++ Redistributable for Visual Studio 2017 x86" Description="Visual C++ Redistributable for Visual Studio 2017 x86" Display="3" Level="1" Attributes="0" Components="B35B3203FEB4CFFA576A27CB835D3E6"/>
-    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AI_ExePath CefSharp.BrowserSubprocess.Core.dll CefSharp.BrowserSubprocess.exe CefSharp.Core.dll CefSharp.WinForms.dll CefSharp.dll GoogleChrome.exe LogData ManagedWifi.dll ProductInformation SHORTCUTDIR am.pak bird.png cef.pak chrome_elf.dll css d3dcompiler_47.dll data_0 data_0_1 error.html jquery1.10.2.js libEGL.dll libEGL.dll_1 libGLESv2.dll libGLESv2.dll_1 libcef.dll log userData"/>
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AI_ExePath CefSharp.BrowserSubprocess.Core.dll CefSharp.BrowserSubprocess.exe CefSharp.Core.dll CefSharp.WinForms.dll CefSharp.dll GoogleChrome.exe LogData ManagedWifi.dll ProductInformation SHORTCUTDIR am.pak cef.pak chrome_elf.dll d3dcompiler_47.dll data_0 data_0_1 data_0_2 data_0_3 enUS80.bdic libEGL.dll libEGL.dll_1 libGLESv2.dll libGLESv2.dll_1 libcef.dll log log_1"/>
     <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
-    <ROW File="CURRENT" Component_="log" FileName="CURRENT" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\CURRENT" SelfReg="false" NextFile="data_0_1"/>
-    <ROW File="CefSharp.BrowserSubprocess.Core.dll" Component_="CefSharp.BrowserSubprocess.Core.dll" FileName="CEFSHA~1.DLL|CefSharp.BrowserSubprocess.Core.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.BrowserSubprocess.Core.dll" SelfReg="false" NextFile="CefSharp.BrowserSubprocess.Core.pdb"/>
-    <ROW File="CefSharp.BrowserSubprocess.Core.pdb" Component_="CefSharp.BrowserSubprocess.Core.dll" FileName="CEFSHA~1.PDB|CefSharp.BrowserSubprocess.Core.pdb" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.BrowserSubprocess.Core.pdb" SelfReg="false" NextFile="CefSharp.BrowserSubprocess.exe"/>
-    <ROW File="CefSharp.BrowserSubprocess.exe" Component_="CefSharp.BrowserSubprocess.exe" FileName="CEFSHA~1.EXE|CefSharp.BrowserSubprocess.exe" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.BrowserSubprocess.exe" SelfReg="false" NextFile="CefSharp.BrowserSubprocess.pdb" DigSign="true"/>
-    <ROW File="CefSharp.BrowserSubprocess.pdb" Component_="CefSharp.BrowserSubprocess.exe" FileName="CEFSHA~2.PDB|CefSharp.BrowserSubprocess.pdb" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.BrowserSubprocess.pdb" SelfReg="false" NextFile="CefSharp.Core.dll"/>
-    <ROW File="CefSharp.Core.dll" Component_="CefSharp.Core.dll" FileName="CEFSHA~2.DLL|CefSharp.Core.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.Core.dll" SelfReg="false" NextFile="CefSharp.Core.pdb"/>
-    <ROW File="CefSharp.Core.pdb" Component_="CefSharp.Core.dll" FileName="CEFSHA~3.PDB|CefSharp.Core.pdb" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.Core.pdb" SelfReg="false" NextFile="CefSharp.dll"/>
-    <ROW File="CefSharp.WinForms.dll" Component_="CefSharp.WinForms.dll" FileName="CEFSHA~3.DLL|CefSharp.WinForms.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.WinForms.dll" SelfReg="false" NextFile="CefSharp.WinForms.pdb"/>
-    <ROW File="CefSharp.WinForms.pdb" Component_="CefSharp.WinForms.dll" FileName="CEFSHA~4.PDB|CefSharp.WinForms.pdb" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.WinForms.pdb" SelfReg="false" NextFile="chrome_elf.dll"/>
-    <ROW File="CefSharp.dll" Component_="CefSharp.dll" FileName="CefSharp.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.dll" SelfReg="false" NextFile="CefSharp.pdb"/>
-    <ROW File="CefSharp.pdb" Component_="CefSharp.dll" FileName="CefSharp.pdb" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.pdb" SelfReg="false" NextFile="CefSharp.WinForms.dll"/>
-    <ROW File="Cookies" Component_="log" FileName="Cookies" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cookies" SelfReg="false" NextFile="Cookiesjournal"/>
-    <ROW File="Cookiesjournal" Component_="log" FileName="COOKIE~1|Cookies-journal" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cookies-journal" SelfReg="false" NextFile="CURRENT"/>
-    <ROW File="GoogleChrome.exe" Component_="GoogleChrome.exe" FileName="GOOGLE~1.EXE|GoogleChrome.exe" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\GoogleChrome.exe" SelfReg="false" NextFile="GoogleChrome.pdb" DigSign="true"/>
-    <ROW File="GoogleChrome.pdb" Component_="GoogleChrome.exe" FileName="GOOGLE~1.PDB|GoogleChrome.pdb" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\GoogleChrome.pdb" SelfReg="false" NextFile="icudtl.dat"/>
-    <ROW File="LOCK" Component_="log" FileName="LOCK" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\LOCK" SelfReg="false" NextFile="LOG_1"/>
-    <ROW File="LOG.old" Component_="log" FileName="LOG.old" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\LOG.old" SelfReg="false" NextFile="MANIFEST000001"/>
-    <ROW File="LOG_1" Component_="log" FileName="LOG" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\LOG" SelfReg="false" NextFile="LOG.old"/>
-    <ROW File="Loading.html" Component_="error.html" FileName="LOADIN~1.HTM|Loading.html" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\assets\Loading.html" SelfReg="false" NextFile="cef.pak"/>
-    <ROW File="LogData" Component_="LogData" FileName="LogData" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\LogData" SelfReg="false" NextFile="log"/>
-    <ROW File="MANIFEST000001" Component_="log" FileName="MANIFE~1|MANIFEST-000001" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\MANIFEST-000001" SelfReg="false" NextFile="VisitedLinks"/>
-    <ROW File="ManagedWifi.dll" Component_="ManagedWifi.dll" FileName="MANAGE~1.DLL|ManagedWifi.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\ManagedWifi.dll" SelfReg="false" NextFile="natives_blob.bin"/>
-    <ROW File="VisitedLinks" Component_="log" FileName="VISITE~1|Visited Links" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Visited Links" SelfReg="false"/>
-    <ROW File="am.pak" Component_="am.pak" FileName="am.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\am.pak" SelfReg="false" NextFile="ar.pak"/>
-    <ROW File="ar.pak" Component_="am.pak" FileName="ar.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\ar.pak" SelfReg="false" NextFile="bg.pak"/>
-    <ROW File="bg.pak" Component_="am.pak" FileName="bg.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\bg.pak" SelfReg="false" NextFile="bn.pak"/>
-    <ROW File="bird.png" Component_="bird.png" FileName="bird.png" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\assets\images\bird.png" SelfReg="false" NextFile="san.png"/>
-    <ROW File="bn.pak" Component_="am.pak" FileName="bn.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\bn.pak" SelfReg="false" NextFile="ca.pak"/>
-    <ROW File="ca.pak" Component_="am.pak" FileName="ca.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\ca.pak" SelfReg="false" NextFile="cs.pak"/>
-    <ROW File="cef.pak" Component_="cef.pak" FileName="cef.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\cef.pak" SelfReg="false" NextFile="cef_100_percent.pak"/>
-    <ROW File="cef_100_percent.pak" Component_="cef.pak" FileName="CEF_10~1.PAK|cef_100_percent.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\cef_100_percent.pak" SelfReg="false" NextFile="cef_200_percent.pak"/>
-    <ROW File="cef_200_percent.pak" Component_="cef.pak" FileName="CEF_20~1.PAK|cef_200_percent.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\cef_200_percent.pak" SelfReg="false" NextFile="cef_extensions.pak"/>
-    <ROW File="cef_extensions.pak" Component_="cef.pak" FileName="CEF_EX~1.PAK|cef_extensions.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\cef_extensions.pak" SelfReg="false" NextFile="CefSharp.BrowserSubprocess.Core.dll"/>
-    <ROW File="chrome_elf.dll" Component_="chrome_elf.dll" FileName="CHROME~1.DLL|chrome_elf.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\chrome_elf.dll" SelfReg="false" NextFile="d3dcompiler_47.dll"/>
-    <ROW File="cs.pak" Component_="am.pak" FileName="cs.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\cs.pak" SelfReg="false" NextFile="da.pak"/>
-    <ROW File="css" Component_="css" FileName="404.css" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\assets\css\404.css" SelfReg="false" NextFile="error.html"/>
-    <ROW File="d3dcompiler_47.dll" Component_="d3dcompiler_47.dll" FileName="D3DCOM~1.DLL|d3dcompiler_47.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\d3dcompiler_47.dll" SelfReg="false" NextFile="debug.log"/>
-    <ROW File="da.pak" Component_="am.pak" FileName="da.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\da.pak" SelfReg="false" NextFile="de.pak"/>
-    <ROW File="data_0" Component_="data_0" FileName="data_0" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\data_0" SelfReg="false" NextFile="data_1"/>
-    <ROW File="data_0_1" Component_="data_0_1" FileName="data_0" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\GPUCache\data_0" SelfReg="false" NextFile="data_1_1"/>
-    <ROW File="data_1" Component_="data_0" FileName="data_1" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\data_1" SelfReg="false" NextFile="data_2"/>
-    <ROW File="data_1_1" Component_="data_0_1" FileName="data_1" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\GPUCache\data_1" SelfReg="false" NextFile="data_2_1"/>
-    <ROW File="data_2" Component_="data_0" FileName="data_2" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\data_2" SelfReg="false" NextFile="data_3"/>
-    <ROW File="data_2_1" Component_="data_0_1" FileName="data_2" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\GPUCache\data_2" SelfReg="false" NextFile="data_3_1"/>
-    <ROW File="data_3" Component_="data_0" FileName="data_3" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\data_3" SelfReg="false" NextFile="f_000001"/>
-    <ROW File="data_3_1" Component_="data_0_1" FileName="data_3" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\GPUCache\data_3" SelfReg="false" NextFile="index_1"/>
-    <ROW File="de.pak" Component_="am.pak" FileName="de.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\de.pak" SelfReg="false" NextFile="el.pak"/>
-    <ROW File="debug.log" Component_="cef.pak" FileName="debug.log" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\debug.log" SelfReg="false" NextFile="devtools_resources.pak"/>
-    <ROW File="devtools_resources.pak" Component_="cef.pak" FileName="DEVTOO~1.PAK|devtools_resources.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\devtools_resources.pak" SelfReg="false" NextFile="GoogleChrome.exe"/>
-    <ROW File="el.pak" Component_="am.pak" FileName="el.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\el.pak" SelfReg="false" NextFile="enGB.pak"/>
-    <ROW File="enGB.pak" Component_="am.pak" FileName="en-GB.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\en-GB.pak" SelfReg="false" NextFile="enUS.pak"/>
-    <ROW File="enUS.pak" Component_="am.pak" FileName="en-US.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\en-US.pak" SelfReg="false" NextFile="es419.pak"/>
-    <ROW File="error.html" Component_="error.html" FileName="ERROR~1.HTM|error.html" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\assets\error.html" SelfReg="false" NextFile="bird.png"/>
-    <ROW File="es.pak" Component_="am.pak" FileName="es.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\es.pak" SelfReg="false" NextFile="et.pak"/>
-    <ROW File="es419.pak" Component_="am.pak" FileName="es-419.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\es-419.pak" SelfReg="false" NextFile="es.pak"/>
-    <ROW File="et.pak" Component_="am.pak" FileName="et.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\et.pak" SelfReg="false" NextFile="fa.pak"/>
-    <ROW File="f_000001" Component_="data_0" FileName="f_000001" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000001" SelfReg="false" NextFile="f_000002"/>
-    <ROW File="f_000002" Component_="data_0" FileName="f_000002" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000002" SelfReg="false" NextFile="f_000003"/>
-    <ROW File="f_000003" Component_="data_0" FileName="f_000003" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000003" SelfReg="false" NextFile="f_000004"/>
-    <ROW File="f_000004" Component_="data_0" FileName="f_000004" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000004" SelfReg="false" NextFile="f_000005"/>
-    <ROW File="f_000005" Component_="data_0" FileName="f_000005" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000005" SelfReg="false" NextFile="f_000006"/>
-    <ROW File="f_000006" Component_="data_0" FileName="f_000006" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000006" SelfReg="false" NextFile="index"/>
-    <ROW File="fa.pak" Component_="am.pak" FileName="fa.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\fa.pak" SelfReg="false" NextFile="fi.pak"/>
-    <ROW File="fi.pak" Component_="am.pak" FileName="fi.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\fi.pak" SelfReg="false" NextFile="fil.pak"/>
-    <ROW File="fil.pak" Component_="am.pak" FileName="fil.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\fil.pak" SelfReg="false" NextFile="fr.pak"/>
-    <ROW File="fr.pak" Component_="am.pak" FileName="fr.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\fr.pak" SelfReg="false" NextFile="gu.pak"/>
-    <ROW File="gu.pak" Component_="am.pak" FileName="gu.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\gu.pak" SelfReg="false" NextFile="he.pak"/>
-    <ROW File="he.pak" Component_="am.pak" FileName="he.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\he.pak" SelfReg="false" NextFile="hi.pak"/>
-    <ROW File="hi.pak" Component_="am.pak" FileName="hi.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\hi.pak" SelfReg="false" NextFile="hr.pak"/>
-    <ROW File="hr.pak" Component_="am.pak" FileName="hr.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\hr.pak" SelfReg="false" NextFile="hu.pak"/>
-    <ROW File="hu.pak" Component_="am.pak" FileName="hu.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\hu.pak" SelfReg="false" NextFile="id.pak"/>
-    <ROW File="icudtl.dat" Component_="cef.pak" FileName="icudtl.dat" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\icudtl.dat" SelfReg="false" NextFile="libcef.dll"/>
-    <ROW File="id.pak" Component_="am.pak" FileName="id.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\id.pak" SelfReg="false" NextFile="it.pak"/>
-    <ROW File="index" Component_="data_0" FileName="index" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\index" SelfReg="false" NextFile="Cookies"/>
-    <ROW File="index_1" Component_="data_0_1" FileName="index" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\GPUCache\index" SelfReg="false" NextFile="LOCK"/>
-    <ROW File="it.pak" Component_="am.pak" FileName="it.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\it.pak" SelfReg="false" NextFile="ja.pak"/>
-    <ROW File="ja.pak" Component_="am.pak" FileName="ja.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\ja.pak" SelfReg="false" NextFile="kn.pak"/>
-    <ROW File="jquery1.10.2.js" Component_="jquery1.10.2.js" FileName="JQUERY~1.JS|jquery-1.10.2.js" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\assets\js\jquery-1.10.2.js" SelfReg="false" NextFile="jquery1.7.2.min.js"/>
-    <ROW File="jquery1.7.2.min.js" Component_="jquery1.10.2.js" FileName="JQUERY~2.JS|jquery-1.7.2.min.js" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\assets\js\jquery-1.7.2.min.js" SelfReg="false" NextFile="Loading.html"/>
-    <ROW File="kn.pak" Component_="am.pak" FileName="kn.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\kn.pak" SelfReg="false" NextFile="ko.pak"/>
-    <ROW File="ko.pak" Component_="am.pak" FileName="ko.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\ko.pak" SelfReg="false" NextFile="lt.pak"/>
-    <ROW File="libEGL.dll" Component_="libEGL.dll" FileName="libEGL.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\swiftshader\libEGL.dll" SelfReg="false" NextFile="libGLESv2.dll"/>
-    <ROW File="libEGL.dll_1" Component_="libEGL.dll_1" FileName="libEGL.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\libEGL.dll" SelfReg="false" NextFile="libGLESv2.dll_1"/>
-    <ROW File="libGLESv2.dll" Component_="libGLESv2.dll" FileName="LIBGLE~1.DLL|libGLESv2.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\swiftshader\libGLESv2.dll" SelfReg="false" NextFile="css"/>
-    <ROW File="libGLESv2.dll_1" Component_="libGLESv2.dll_1" FileName="LIBGLE~1.DLL|libGLESv2.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\libGLESv2.dll" SelfReg="false" NextFile="ManagedWifi.dll"/>
-    <ROW File="libcef.dll" Component_="libcef.dll" FileName="libcef.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\libcef.dll" SelfReg="false" NextFile="libEGL.dll_1"/>
-    <ROW File="log" Component_="log" FileName="000003.log" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\000003.log" SelfReg="false" NextFile="data_0"/>
-    <ROW File="lt.pak" Component_="am.pak" FileName="lt.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\lt.pak" SelfReg="false" NextFile="lv.pak"/>
-    <ROW File="lv.pak" Component_="am.pak" FileName="lv.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\lv.pak" SelfReg="false" NextFile="ml.pak"/>
-    <ROW File="ml.pak" Component_="am.pak" FileName="ml.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\ml.pak" SelfReg="false" NextFile="mr.pak"/>
-    <ROW File="mr.pak" Component_="am.pak" FileName="mr.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\mr.pak" SelfReg="false" NextFile="ms.pak"/>
-    <ROW File="ms.pak" Component_="am.pak" FileName="ms.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\ms.pak" SelfReg="false" NextFile="nb.pak"/>
-    <ROW File="natives_blob.bin" Component_="cef.pak" FileName="NATIVE~1.BIN|natives_blob.bin" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\natives_blob.bin" SelfReg="false" NextFile="snapshot_blob.bin"/>
-    <ROW File="nb.pak" Component_="am.pak" FileName="nb.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\nb.pak" SelfReg="false" NextFile="nl.pak"/>
-    <ROW File="nl.pak" Component_="am.pak" FileName="nl.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\nl.pak" SelfReg="false" NextFile="pl.pak"/>
-    <ROW File="pl.pak" Component_="am.pak" FileName="pl.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\pl.pak" SelfReg="false" NextFile="ptBR.pak"/>
-    <ROW File="ptBR.pak" Component_="am.pak" FileName="pt-BR.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\pt-BR.pak" SelfReg="false" NextFile="ptPT.pak"/>
-    <ROW File="ptPT.pak" Component_="am.pak" FileName="pt-PT.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\pt-PT.pak" SelfReg="false" NextFile="ro.pak"/>
-    <ROW File="ro.pak" Component_="am.pak" FileName="ro.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\ro.pak" SelfReg="false" NextFile="ru.pak"/>
-    <ROW File="ru.pak" Component_="am.pak" FileName="ru.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\ru.pak" SelfReg="false" NextFile="sk.pak"/>
-    <ROW File="san.png" Component_="bird.png" FileName="san.png" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\assets\images\san.png" SelfReg="false" NextFile="yun0.png"/>
-    <ROW File="sk.pak" Component_="am.pak" FileName="sk.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\sk.pak" SelfReg="false" NextFile="sl.pak"/>
-    <ROW File="sl.pak" Component_="am.pak" FileName="sl.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\sl.pak" SelfReg="false" NextFile="sr.pak"/>
-    <ROW File="snapshot_blob.bin" Component_="cef.pak" FileName="SNAPSH~1.BIN|snapshot_blob.bin" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\snapshot_blob.bin" SelfReg="false" NextFile="v8_context_snapshot.bin"/>
-    <ROW File="sr.pak" Component_="am.pak" FileName="sr.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\sr.pak" SelfReg="false" NextFile="sv.pak"/>
-    <ROW File="sv.pak" Component_="am.pak" FileName="sv.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\sv.pak" SelfReg="false" NextFile="sw.pak"/>
-    <ROW File="sw.pak" Component_="am.pak" FileName="sw.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\sw.pak" SelfReg="false" NextFile="ta.pak"/>
-    <ROW File="ta.pak" Component_="am.pak" FileName="ta.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\ta.pak" SelfReg="false" NextFile="te.pak"/>
-    <ROW File="te.pak" Component_="am.pak" FileName="te.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\te.pak" SelfReg="false" NextFile="th.pak"/>
-    <ROW File="th.pak" Component_="am.pak" FileName="th.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\th.pak" SelfReg="false" NextFile="tr.pak"/>
-    <ROW File="tr.pak" Component_="am.pak" FileName="tr.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\tr.pak" SelfReg="false" NextFile="uk.pak"/>
-    <ROW File="uk.pak" Component_="am.pak" FileName="uk.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\uk.pak" SelfReg="false" NextFile="vi.pak"/>
-    <ROW File="v8_context_snapshot.bin" Component_="cef.pak" FileName="V8_CON~1.BIN|v8_context_snapshot.bin" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\v8_context_snapshot.bin" SelfReg="false" NextFile="LogData"/>
-    <ROW File="vi.pak" Component_="am.pak" FileName="vi.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\vi.pak" SelfReg="false" NextFile="zhCN.pak"/>
-    <ROW File="yun0.png" Component_="bird.png" FileName="yun0.png" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\assets\images\yun0.png" SelfReg="false" NextFile="yun1.png"/>
-    <ROW File="yun1.png" Component_="bird.png" FileName="yun1.png" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\assets\images\yun1.png" SelfReg="false" NextFile="yun2.png"/>
-    <ROW File="yun2.png" Component_="bird.png" FileName="yun2.png" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\assets\images\yun2.png" SelfReg="false" NextFile="jquery1.10.2.js"/>
-    <ROW File="zhCN.pak" Component_="am.pak" FileName="zh-CN.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\zh-CN.pak" SelfReg="false" NextFile="zhTW.pak"/>
-    <ROW File="zhTW.pak" Component_="am.pak" FileName="zh-TW.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\zh-TW.pak" SelfReg="false" NextFile="libEGL.dll"/>
-  </COMPONENT>
-  <COMPONENT cid="caphyon.advinst.msicomp.AiRemoveFileComponent">
-    <ROW RemoveFile="_" Condition="(AI_CLEAN_RESOURCES_UNINSTALL = &quot;1&quot;) AND (NOT UPGRADINGPRODUCTCODE)" Options="3"/>
+    <ROW File="CURRENT" Component_="log" FileName="CURRENT" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\CURRENT" SelfReg="false" NextFile="data_0_1"/>
+    <ROW File="CURRENT_1" Component_="log_1" FileName="CURRENT" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Local Storage\leveldb\CURRENT" SelfReg="false" NextFile="LOCK"/>
+    <ROW File="CefSharp.BrowserSubprocess.Core.dll" Component_="CefSharp.BrowserSubprocess.Core.dll" FileName="CEFSHA~1.DLL|CefSharp.BrowserSubprocess.Core.dll" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CefSharp.BrowserSubprocess.Core.dll" SelfReg="false" NextFile="CefSharp.BrowserSubprocess.Core.pdb"/>
+    <ROW File="CefSharp.BrowserSubprocess.Core.pdb" Component_="CefSharp.BrowserSubprocess.Core.dll" FileName="CEFSHA~1.PDB|CefSharp.BrowserSubprocess.Core.pdb" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CefSharp.BrowserSubprocess.Core.pdb" SelfReg="false" NextFile="CefSharp.BrowserSubprocess.exe"/>
+    <ROW File="CefSharp.BrowserSubprocess.exe" Component_="CefSharp.BrowserSubprocess.exe" FileName="CEFSHA~1.EXE|CefSharp.BrowserSubprocess.exe" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CefSharp.BrowserSubprocess.exe" SelfReg="false" NextFile="CefSharp.BrowserSubprocess.pdb" DigSign="true"/>
+    <ROW File="CefSharp.BrowserSubprocess.pdb" Component_="CefSharp.BrowserSubprocess.exe" FileName="CEFSHA~2.PDB|CefSharp.BrowserSubprocess.pdb" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CefSharp.BrowserSubprocess.pdb" SelfReg="false" NextFile="CefSharp.Core.dll"/>
+    <ROW File="CefSharp.Core.dll" Component_="CefSharp.Core.dll" FileName="CEFSHA~2.DLL|CefSharp.Core.dll" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CefSharp.Core.dll" SelfReg="false" NextFile="CefSharp.Core.pdb"/>
+    <ROW File="CefSharp.Core.pdb" Component_="CefSharp.Core.dll" FileName="CEFSHA~3.PDB|CefSharp.Core.pdb" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CefSharp.Core.pdb" SelfReg="false" NextFile="CefSharp.dll"/>
+    <ROW File="CefSharp.WinForms.dll" Component_="CefSharp.WinForms.dll" FileName="CEFSHA~3.DLL|CefSharp.WinForms.dll" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CefSharp.WinForms.dll" SelfReg="false" NextFile="CefSharp.WinForms.pdb"/>
+    <ROW File="CefSharp.WinForms.pdb" Component_="CefSharp.WinForms.dll" FileName="CEFSHA~4.PDB|CefSharp.WinForms.pdb" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CefSharp.WinForms.pdb" SelfReg="false" NextFile="chrome_elf.dll"/>
+    <ROW File="CefSharp.dll" Component_="CefSharp.dll" FileName="CefSharp.dll" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CefSharp.dll" SelfReg="false" NextFile="CefSharp.pdb"/>
+    <ROW File="CefSharp.pdb" Component_="CefSharp.dll" FileName="CefSharp.pdb" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CefSharp.pdb" SelfReg="false" NextFile="CefSharp.WinForms.dll"/>
+    <ROW File="Cookies" Component_="log" FileName="Cookies" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cookies" SelfReg="false" NextFile="Cookiesjournal"/>
+    <ROW File="Cookiesjournal" Component_="log" FileName="COOKIE~1|Cookies-journal" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cookies-journal" SelfReg="false" NextFile="CURRENT"/>
+    <ROW File="GoogleChrome.exe" Component_="GoogleChrome.exe" FileName="GOOGLE~1.EXE|GoogleChrome.exe" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\GoogleChrome.exe" SelfReg="false" NextFile="GoogleChrome.pdb" DigSign="true"/>
+    <ROW File="GoogleChrome.pdb" Component_="GoogleChrome.exe" FileName="GOOGLE~1.PDB|GoogleChrome.pdb" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\GoogleChrome.pdb" SelfReg="false" NextFile="icudtl.dat"/>
+    <ROW File="LOCK" Component_="log_1" FileName="LOCK" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Local Storage\leveldb\LOCK" SelfReg="false" NextFile="LOG_2"/>
+    <ROW File="LOCK_1" Component_="log" FileName="LOCK" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\LOCK" SelfReg="false" NextFile="LOG_3"/>
+    <ROW File="LOG.old" Component_="log_1" FileName="LOG.old" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Local Storage\leveldb\LOG.old" SelfReg="false" NextFile="MANIFEST000001"/>
+    <ROW File="LOG.old_1" Component_="log" FileName="LOG.old" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\LOG.old" SelfReg="false" NextFile="MANIFEST000001_1"/>
+    <ROW File="LOG_2" Component_="log_1" FileName="LOG" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Local Storage\leveldb\LOG" SelfReg="false" NextFile="LOG.old"/>
+    <ROW File="LOG_3" Component_="log" FileName="LOG" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\LOG" SelfReg="false" NextFile="LOG.old_1"/>
+    <ROW File="LogData" Component_="LogData" FileName="LogData" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\LogData" SelfReg="false" NextFile="enUS80.bdic"/>
+    <ROW File="MANIFEST000001" Component_="log_1" FileName="MANIFE~1|MANIFEST-000001" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Local Storage\leveldb\MANIFEST-000001" SelfReg="false" NextFile="LOCK_1"/>
+    <ROW File="MANIFEST000001_1" Component_="log" FileName="MANIFE~1|MANIFEST-000001" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\MANIFEST-000001" SelfReg="false" NextFile="data_0_2"/>
+    <ROW File="ManagedWifi.dll" Component_="ManagedWifi.dll" FileName="MANAGE~1.DLL|ManagedWifi.dll" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\ManagedWifi.dll" SelfReg="false" NextFile="natives_blob.bin"/>
+    <ROW File="VisitedLinks" Component_="log" FileName="VISITE~1|Visited Links" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Visited Links" SelfReg="false" NextFile="LogData"/>
+    <ROW File="am.pak" Component_="am.pak" FileName="am.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\am.pak" SelfReg="false" NextFile="ar.pak"/>
+    <ROW File="ar.pak" Component_="am.pak" FileName="ar.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\ar.pak" SelfReg="false" NextFile="bg.pak"/>
+    <ROW File="bg.pak" Component_="am.pak" FileName="bg.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\bg.pak" SelfReg="false" NextFile="bn.pak"/>
+    <ROW File="bn.pak" Component_="am.pak" FileName="bn.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\bn.pak" SelfReg="false" NextFile="ca.pak"/>
+    <ROW File="ca.pak" Component_="am.pak" FileName="ca.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\ca.pak" SelfReg="false" NextFile="cs.pak"/>
+    <ROW File="cef.pak" Component_="cef.pak" FileName="cef.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\cef.pak" SelfReg="false" NextFile="cef_100_percent.pak"/>
+    <ROW File="cef_100_percent.pak" Component_="cef.pak" FileName="CEF_10~1.PAK|cef_100_percent.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\cef_100_percent.pak" SelfReg="false" NextFile="cef_200_percent.pak"/>
+    <ROW File="cef_200_percent.pak" Component_="cef.pak" FileName="CEF_20~1.PAK|cef_200_percent.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\cef_200_percent.pak" SelfReg="false" NextFile="cef_extensions.pak"/>
+    <ROW File="cef_extensions.pak" Component_="cef.pak" FileName="CEF_EX~1.PAK|cef_extensions.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\cef_extensions.pak" SelfReg="false" NextFile="CefSharp.BrowserSubprocess.Core.dll"/>
+    <ROW File="chrome_elf.dll" Component_="chrome_elf.dll" FileName="CHROME~1.DLL|chrome_elf.dll" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\chrome_elf.dll" SelfReg="false" NextFile="d3dcompiler_47.dll"/>
+    <ROW File="cs.pak" Component_="am.pak" FileName="cs.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\cs.pak" SelfReg="false" NextFile="da.pak"/>
+    <ROW File="d3dcompiler_47.dll" Component_="d3dcompiler_47.dll" FileName="D3DCOM~1.DLL|d3dcompiler_47.dll" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\d3dcompiler_47.dll" SelfReg="false" NextFile="debug.log"/>
+    <ROW File="da.pak" Component_="am.pak" FileName="da.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\da.pak" SelfReg="false" NextFile="de.pak"/>
+    <ROW File="data_0" Component_="data_0" FileName="data_0" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\data_0" SelfReg="false" NextFile="data_1"/>
+    <ROW File="data_0_1" Component_="data_0_1" FileName="data_0" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\GPUCache\data_0" SelfReg="false" NextFile="data_1_1"/>
+    <ROW File="data_0_2" Component_="data_0_2" FileName="data_0" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\old_Cache_000\data_0" SelfReg="false" NextFile="data_1_2"/>
+    <ROW File="data_0_3" Component_="data_0_3" FileName="data_0" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\old_GPUCache_000\data_0" SelfReg="false" NextFile="data_1_3"/>
+    <ROW File="data_1" Component_="data_0" FileName="data_1" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\data_1" SelfReg="false" NextFile="data_2"/>
+    <ROW File="data_1_1" Component_="data_0_1" FileName="data_1" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\GPUCache\data_1" SelfReg="false" NextFile="data_2_1"/>
+    <ROW File="data_1_2" Component_="data_0_2" FileName="data_1" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\old_Cache_000\data_1" SelfReg="false" NextFile="data_2_2"/>
+    <ROW File="data_1_3" Component_="data_0_3" FileName="data_1" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\old_GPUCache_000\data_1" SelfReg="false" NextFile="data_2_3"/>
+    <ROW File="data_2" Component_="data_0" FileName="data_2" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\data_2" SelfReg="false" NextFile="data_3"/>
+    <ROW File="data_2_1" Component_="data_0_1" FileName="data_2" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\GPUCache\data_2" SelfReg="false" NextFile="data_3_1"/>
+    <ROW File="data_2_2" Component_="data_0_2" FileName="data_2" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\old_Cache_000\data_2" SelfReg="false" NextFile="data_3_2"/>
+    <ROW File="data_2_3" Component_="data_0_3" FileName="data_2" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\old_GPUCache_000\data_2" SelfReg="false" NextFile="data_3_3"/>
+    <ROW File="data_3" Component_="data_0" FileName="data_3" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\data_3" SelfReg="false" NextFile="f_000003"/>
+    <ROW File="data_3_1" Component_="data_0_1" FileName="data_3" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\GPUCache\data_3" SelfReg="false" NextFile="f_000001"/>
+    <ROW File="data_3_2" Component_="data_0_2" FileName="data_3" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\old_Cache_000\data_3" SelfReg="false" NextFile="index_2"/>
+    <ROW File="data_3_3" Component_="data_0_3" FileName="data_3" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\old_GPUCache_000\data_3" SelfReg="false" NextFile="index_3"/>
+    <ROW File="de.pak" Component_="am.pak" FileName="de.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\de.pak" SelfReg="false" NextFile="el.pak"/>
+    <ROW File="debug.log" Component_="cef.pak" FileName="debug.log" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\debug.log" SelfReg="false" NextFile="devtools_resources.pak"/>
+    <ROW File="devtools_resources.pak" Component_="cef.pak" FileName="DEVTOO~1.PAK|devtools_resources.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\devtools_resources.pak" SelfReg="false" NextFile="GoogleChrome.exe"/>
+    <ROW File="el.pak" Component_="am.pak" FileName="el.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\el.pak" SelfReg="false" NextFile="enGB.pak"/>
+    <ROW File="enGB.pak" Component_="am.pak" FileName="en-GB.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\en-GB.pak" SelfReg="false" NextFile="enUS.pak"/>
+    <ROW File="enUS.pak" Component_="am.pak" FileName="en-US.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\en-US.pak" SelfReg="false" NextFile="es419.pak"/>
+    <ROW File="enUS80.bdic" Component_="enUS80.bdic" FileName="EN-US-~1.BDI|en-US-8-0.bdic" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\userData\Dictionaries\en-US-8-0.bdic" SelfReg="false" NextFile="am.pak"/>
+    <ROW File="es.pak" Component_="am.pak" FileName="es.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\es.pak" SelfReg="false" NextFile="et.pak"/>
+    <ROW File="es419.pak" Component_="am.pak" FileName="es-419.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\es-419.pak" SelfReg="false" NextFile="es.pak"/>
+    <ROW File="et.pak" Component_="am.pak" FileName="et.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\et.pak" SelfReg="false" NextFile="fa.pak"/>
+    <ROW File="f_000001" Component_="data_0_1" FileName="f_000001" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\GPUCache\f_000001" SelfReg="false" NextFile="f_000002"/>
+    <ROW File="f_000002" Component_="data_0_1" FileName="f_000002" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\GPUCache\f_000002" SelfReg="false" NextFile="f_000003_1"/>
+    <ROW File="f_000003" Component_="data_0" FileName="f_000003" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000003" SelfReg="false" NextFile="f_000004"/>
+    <ROW File="f_000003_1" Component_="data_0_1" FileName="f_000003" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\GPUCache\f_000003" SelfReg="false" NextFile="f_000004_1"/>
+    <ROW File="f_000004" Component_="data_0" FileName="f_000004" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000004" SelfReg="false" NextFile="f_000005"/>
+    <ROW File="f_000004_1" Component_="data_0_1" FileName="f_000004" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\GPUCache\f_000004" SelfReg="false" NextFile="f_000005_1"/>
+    <ROW File="f_000005" Component_="data_0" FileName="f_000005" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000005" SelfReg="false" NextFile="f_000006"/>
+    <ROW File="f_000005_1" Component_="data_0_1" FileName="f_000005" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\GPUCache\f_000005" SelfReg="false" NextFile="f_000006_1"/>
+    <ROW File="f_000006" Component_="data_0" FileName="f_000006" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000006" SelfReg="false" NextFile="f_000007"/>
+    <ROW File="f_000006_1" Component_="data_0_1" FileName="f_000006" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\GPUCache\f_000006" SelfReg="false" NextFile="index_1"/>
+    <ROW File="f_000007" Component_="data_0" FileName="f_000007" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000007" SelfReg="false" NextFile="f_000008"/>
+    <ROW File="f_000008" Component_="data_0" FileName="f_000008" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000008" SelfReg="false" NextFile="f_000009"/>
+    <ROW File="f_000009" Component_="data_0" FileName="f_000009" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000009" SelfReg="false" NextFile="f_00000a"/>
+    <ROW File="f_00000a" Component_="data_0" FileName="f_00000a" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00000a" SelfReg="false" NextFile="f_00000b"/>
+    <ROW File="f_00000b" Component_="data_0" FileName="f_00000b" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00000b" SelfReg="false" NextFile="f_00000c"/>
+    <ROW File="f_00000c" Component_="data_0" FileName="f_00000c" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00000c" SelfReg="false" NextFile="f_00000d"/>
+    <ROW File="f_00000d" Component_="data_0" FileName="f_00000d" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00000d" SelfReg="false" NextFile="f_00000e"/>
+    <ROW File="f_00000e" Component_="data_0" FileName="f_00000e" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00000e" SelfReg="false" NextFile="f_00000f"/>
+    <ROW File="f_00000f" Component_="data_0" FileName="f_00000f" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00000f" SelfReg="false" NextFile="f_000010"/>
+    <ROW File="f_000010" Component_="data_0" FileName="f_000010" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000010" SelfReg="false" NextFile="f_000011"/>
+    <ROW File="f_000011" Component_="data_0" FileName="f_000011" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000011" SelfReg="false" NextFile="f_000012"/>
+    <ROW File="f_000012" Component_="data_0" FileName="f_000012" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000012" SelfReg="false" NextFile="f_000013"/>
+    <ROW File="f_000013" Component_="data_0" FileName="f_000013" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000013" SelfReg="false" NextFile="f_000014"/>
+    <ROW File="f_000014" Component_="data_0" FileName="f_000014" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000014" SelfReg="false" NextFile="f_000015"/>
+    <ROW File="f_000015" Component_="data_0" FileName="f_000015" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000015" SelfReg="false" NextFile="f_000016"/>
+    <ROW File="f_000016" Component_="data_0" FileName="f_000016" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000016" SelfReg="false" NextFile="f_000017"/>
+    <ROW File="f_000017" Component_="data_0" FileName="f_000017" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000017" SelfReg="false" NextFile="f_000018"/>
+    <ROW File="f_000018" Component_="data_0" FileName="f_000018" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000018" SelfReg="false" NextFile="f_000019"/>
+    <ROW File="f_000019" Component_="data_0" FileName="f_000019" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000019" SelfReg="false" NextFile="f_00001a"/>
+    <ROW File="f_00001a" Component_="data_0" FileName="f_00001a" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00001a" SelfReg="false" NextFile="f_00001b"/>
+    <ROW File="f_00001b" Component_="data_0" FileName="f_00001b" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00001b" SelfReg="false" NextFile="f_00001c"/>
+    <ROW File="f_00001c" Component_="data_0" FileName="f_00001c" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00001c" SelfReg="false" NextFile="f_00001d"/>
+    <ROW File="f_00001d" Component_="data_0" FileName="f_00001d" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00001d" SelfReg="false" NextFile="f_00001e"/>
+    <ROW File="f_00001e" Component_="data_0" FileName="f_00001e" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00001e" SelfReg="false" NextFile="f_00001f"/>
+    <ROW File="f_00001f" Component_="data_0" FileName="f_00001f" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00001f" SelfReg="false" NextFile="f_000020"/>
+    <ROW File="f_000020" Component_="data_0" FileName="f_000020" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000020" SelfReg="false" NextFile="f_000021"/>
+    <ROW File="f_000021" Component_="data_0" FileName="f_000021" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000021" SelfReg="false" NextFile="f_000022"/>
+    <ROW File="f_000022" Component_="data_0" FileName="f_000022" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000022" SelfReg="false" NextFile="f_000023"/>
+    <ROW File="f_000023" Component_="data_0" FileName="f_000023" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000023" SelfReg="false" NextFile="f_000024"/>
+    <ROW File="f_000024" Component_="data_0" FileName="f_000024" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000024" SelfReg="false" NextFile="f_000025"/>
+    <ROW File="f_000025" Component_="data_0" FileName="f_000025" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000025" SelfReg="false" NextFile="f_000026"/>
+    <ROW File="f_000026" Component_="data_0" FileName="f_000026" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000026" SelfReg="false" NextFile="f_000027"/>
+    <ROW File="f_000027" Component_="data_0" FileName="f_000027" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000027" SelfReg="false" NextFile="f_000028"/>
+    <ROW File="f_000028" Component_="data_0" FileName="f_000028" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000028" SelfReg="false" NextFile="f_000029"/>
+    <ROW File="f_000029" Component_="data_0" FileName="f_000029" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000029" SelfReg="false" NextFile="f_00002a"/>
+    <ROW File="f_00002a" Component_="data_0" FileName="f_00002a" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00002a" SelfReg="false" NextFile="f_00002b"/>
+    <ROW File="f_00002b" Component_="data_0" FileName="f_00002b" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00002b" SelfReg="false" NextFile="f_00002c"/>
+    <ROW File="f_00002c" Component_="data_0" FileName="f_00002c" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00002c" SelfReg="false" NextFile="f_00002d"/>
+    <ROW File="f_00002d" Component_="data_0" FileName="f_00002d" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00002d" SelfReg="false" NextFile="f_00002e"/>
+    <ROW File="f_00002e" Component_="data_0" FileName="f_00002e" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00002e" SelfReg="false" NextFile="f_00002f"/>
+    <ROW File="f_00002f" Component_="data_0" FileName="f_00002f" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00002f" SelfReg="false" NextFile="f_000030"/>
+    <ROW File="f_000030" Component_="data_0" FileName="f_000030" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000030" SelfReg="false" NextFile="f_000031"/>
+    <ROW File="f_000031" Component_="data_0" FileName="f_000031" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000031" SelfReg="false" NextFile="f_000032"/>
+    <ROW File="f_000032" Component_="data_0" FileName="f_000032" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000032" SelfReg="false" NextFile="f_000033"/>
+    <ROW File="f_000033" Component_="data_0" FileName="f_000033" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000033" SelfReg="false" NextFile="f_000034"/>
+    <ROW File="f_000034" Component_="data_0" FileName="f_000034" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000034" SelfReg="false" NextFile="f_000035"/>
+    <ROW File="f_000035" Component_="data_0" FileName="f_000035" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000035" SelfReg="false" NextFile="f_000036"/>
+    <ROW File="f_000036" Component_="data_0" FileName="f_000036" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000036" SelfReg="false" NextFile="f_000037"/>
+    <ROW File="f_000037" Component_="data_0" FileName="f_000037" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000037" SelfReg="false" NextFile="f_000038"/>
+    <ROW File="f_000038" Component_="data_0" FileName="f_000038" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000038" SelfReg="false" NextFile="f_000039"/>
+    <ROW File="f_000039" Component_="data_0" FileName="f_000039" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000039" SelfReg="false" NextFile="f_00003a"/>
+    <ROW File="f_00003a" Component_="data_0" FileName="f_00003a" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00003a" SelfReg="false" NextFile="f_00003b"/>
+    <ROW File="f_00003b" Component_="data_0" FileName="f_00003b" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00003b" SelfReg="false" NextFile="f_00003c"/>
+    <ROW File="f_00003c" Component_="data_0" FileName="f_00003c" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00003c" SelfReg="false" NextFile="f_00003d"/>
+    <ROW File="f_00003d" Component_="data_0" FileName="f_00003d" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00003d" SelfReg="false" NextFile="f_00003e"/>
+    <ROW File="f_00003e" Component_="data_0" FileName="f_00003e" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00003e" SelfReg="false" NextFile="f_00003f"/>
+    <ROW File="f_00003f" Component_="data_0" FileName="f_00003f" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00003f" SelfReg="false" NextFile="f_000040"/>
+    <ROW File="f_000040" Component_="data_0" FileName="f_000040" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000040" SelfReg="false" NextFile="f_000041"/>
+    <ROW File="f_000041" Component_="data_0" FileName="f_000041" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000041" SelfReg="false" NextFile="f_000042"/>
+    <ROW File="f_000042" Component_="data_0" FileName="f_000042" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000042" SelfReg="false" NextFile="f_000043"/>
+    <ROW File="f_000043" Component_="data_0" FileName="f_000043" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000043" SelfReg="false" NextFile="f_000044"/>
+    <ROW File="f_000044" Component_="data_0" FileName="f_000044" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000044" SelfReg="false" NextFile="f_000045"/>
+    <ROW File="f_000045" Component_="data_0" FileName="f_000045" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000045" SelfReg="false" NextFile="f_000046"/>
+    <ROW File="f_000046" Component_="data_0" FileName="f_000046" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000046" SelfReg="false" NextFile="f_000047"/>
+    <ROW File="f_000047" Component_="data_0" FileName="f_000047" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000047" SelfReg="false" NextFile="f_000048"/>
+    <ROW File="f_000048" Component_="data_0" FileName="f_000048" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000048" SelfReg="false" NextFile="f_000049"/>
+    <ROW File="f_000049" Component_="data_0" FileName="f_000049" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000049" SelfReg="false" NextFile="f_00004a"/>
+    <ROW File="f_00004a" Component_="data_0" FileName="f_00004a" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00004a" SelfReg="false" NextFile="f_00004b"/>
+    <ROW File="f_00004b" Component_="data_0" FileName="f_00004b" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00004b" SelfReg="false" NextFile="f_00004c"/>
+    <ROW File="f_00004c" Component_="data_0" FileName="f_00004c" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00004c" SelfReg="false" NextFile="f_00004d"/>
+    <ROW File="f_00004d" Component_="data_0" FileName="f_00004d" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00004d" SelfReg="false" NextFile="f_00004e"/>
+    <ROW File="f_00004e" Component_="data_0" FileName="f_00004e" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00004e" SelfReg="false" NextFile="f_00004f"/>
+    <ROW File="f_00004f" Component_="data_0" FileName="f_00004f" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_00004f" SelfReg="false" NextFile="f_000050"/>
+    <ROW File="f_000050" Component_="data_0" FileName="f_000050" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000050" SelfReg="false" NextFile="f_000051"/>
+    <ROW File="f_000051" Component_="data_0" FileName="f_000051" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000051" SelfReg="false" NextFile="f_000053"/>
+    <ROW File="f_000053" Component_="data_0" FileName="f_000053" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000053" SelfReg="false" NextFile="f_000054"/>
+    <ROW File="f_000054" Component_="data_0" FileName="f_000054" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000054" SelfReg="false" NextFile="f_000055"/>
+    <ROW File="f_000055" Component_="data_0" FileName="f_000055" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000055" SelfReg="false" NextFile="f_000056"/>
+    <ROW File="f_000056" Component_="data_0" FileName="f_000056" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000056" SelfReg="false" NextFile="f_000057"/>
+    <ROW File="f_000057" Component_="data_0" FileName="f_000057" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000057" SelfReg="false" NextFile="f_000059"/>
+    <ROW File="f_000059" Component_="data_0" FileName="f_000059" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\f_000059" SelfReg="false" NextFile="index"/>
+    <ROW File="fa.pak" Component_="am.pak" FileName="fa.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\fa.pak" SelfReg="false" NextFile="fi.pak"/>
+    <ROW File="fi.pak" Component_="am.pak" FileName="fi.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\fi.pak" SelfReg="false" NextFile="fil.pak"/>
+    <ROW File="fil.pak" Component_="am.pak" FileName="fil.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\fil.pak" SelfReg="false" NextFile="fr.pak"/>
+    <ROW File="fr.pak" Component_="am.pak" FileName="fr.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\fr.pak" SelfReg="false" NextFile="gu.pak"/>
+    <ROW File="gu.pak" Component_="am.pak" FileName="gu.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\gu.pak" SelfReg="false" NextFile="he.pak"/>
+    <ROW File="he.pak" Component_="am.pak" FileName="he.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\he.pak" SelfReg="false" NextFile="hi.pak"/>
+    <ROW File="hi.pak" Component_="am.pak" FileName="hi.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\hi.pak" SelfReg="false" NextFile="hr.pak"/>
+    <ROW File="hr.pak" Component_="am.pak" FileName="hr.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\hr.pak" SelfReg="false" NextFile="hu.pak"/>
+    <ROW File="hu.pak" Component_="am.pak" FileName="hu.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\hu.pak" SelfReg="false" NextFile="id.pak"/>
+    <ROW File="icudtl.dat" Component_="cef.pak" FileName="icudtl.dat" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\icudtl.dat" SelfReg="false" NextFile="libcef.dll"/>
+    <ROW File="id.pak" Component_="am.pak" FileName="id.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\id.pak" SelfReg="false" NextFile="it.pak"/>
+    <ROW File="index" Component_="data_0" FileName="index" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Cache\index" SelfReg="false" NextFile="Cookies"/>
+    <ROW File="index_1" Component_="data_0_1" FileName="index" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\GPUCache\index" SelfReg="false" NextFile="log_1"/>
+    <ROW File="index_2" Component_="data_0_2" FileName="index" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\old_Cache_000\index" SelfReg="false" NextFile="data_0_3"/>
+    <ROW File="index_3" Component_="data_0_3" FileName="index" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\old_GPUCache_000\index" SelfReg="false" NextFile="VisitedLinks"/>
+    <ROW File="it.pak" Component_="am.pak" FileName="it.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\it.pak" SelfReg="false" NextFile="ja.pak"/>
+    <ROW File="ja.pak" Component_="am.pak" FileName="ja.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\ja.pak" SelfReg="false" NextFile="kn.pak"/>
+    <ROW File="kn.pak" Component_="am.pak" FileName="kn.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\kn.pak" SelfReg="false" NextFile="ko.pak"/>
+    <ROW File="ko.pak" Component_="am.pak" FileName="ko.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\ko.pak" SelfReg="false" NextFile="lt.pak"/>
+    <ROW File="libEGL.dll" Component_="libEGL.dll" FileName="libEGL.dll" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\libEGL.dll" SelfReg="false" NextFile="libGLESv2.dll"/>
+    <ROW File="libEGL.dll_1" Component_="libEGL.dll_1" FileName="libEGL.dll" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\swiftshader\libEGL.dll" SelfReg="false" NextFile="libGLESv2.dll_1"/>
+    <ROW File="libGLESv2.dll" Component_="libGLESv2.dll" FileName="LIBGLE~1.DLL|libGLESv2.dll" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\libGLESv2.dll" SelfReg="false" NextFile="ManagedWifi.dll"/>
+    <ROW File="libGLESv2.dll_1" Component_="libGLESv2.dll_1" FileName="LIBGLE~1.DLL|libGLESv2.dll" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\swiftshader\libGLESv2.dll" SelfReg="false"/>
+    <ROW File="libcef.dll" Component_="libcef.dll" FileName="libcef.dll" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\libcef.dll" SelfReg="false" NextFile="libEGL.dll"/>
+    <ROW File="log" Component_="log" FileName="000003.log" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\000003.log" SelfReg="false" NextFile="data_0"/>
+    <ROW File="log_1" Component_="log_1" FileName="000003.log" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\CHBrowser\BrowserCache\Local Storage\leveldb\000003.log" SelfReg="false" NextFile="CURRENT_1"/>
+    <ROW File="lt.pak" Component_="am.pak" FileName="lt.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\lt.pak" SelfReg="false" NextFile="lv.pak"/>
+    <ROW File="lv.pak" Component_="am.pak" FileName="lv.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\lv.pak" SelfReg="false" NextFile="ml.pak"/>
+    <ROW File="ml.pak" Component_="am.pak" FileName="ml.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\ml.pak" SelfReg="false" NextFile="mr.pak"/>
+    <ROW File="mr.pak" Component_="am.pak" FileName="mr.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\mr.pak" SelfReg="false" NextFile="ms.pak"/>
+    <ROW File="ms.pak" Component_="am.pak" FileName="ms.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\ms.pak" SelfReg="false" NextFile="nb.pak"/>
+    <ROW File="natives_blob.bin" Component_="cef.pak" FileName="NATIVE~1.BIN|natives_blob.bin" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\natives_blob.bin" SelfReg="false" NextFile="snapshot_blob.bin"/>
+    <ROW File="nb.pak" Component_="am.pak" FileName="nb.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\nb.pak" SelfReg="false" NextFile="nl.pak"/>
+    <ROW File="nl.pak" Component_="am.pak" FileName="nl.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\nl.pak" SelfReg="false" NextFile="pl.pak"/>
+    <ROW File="pl.pak" Component_="am.pak" FileName="pl.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\pl.pak" SelfReg="false" NextFile="ptBR.pak"/>
+    <ROW File="ptBR.pak" Component_="am.pak" FileName="pt-BR.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\pt-BR.pak" SelfReg="false" NextFile="ptPT.pak"/>
+    <ROW File="ptPT.pak" Component_="am.pak" FileName="pt-PT.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\pt-PT.pak" SelfReg="false" NextFile="ro.pak"/>
+    <ROW File="ro.pak" Component_="am.pak" FileName="ro.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\ro.pak" SelfReg="false" NextFile="ru.pak"/>
+    <ROW File="ru.pak" Component_="am.pak" FileName="ru.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\ru.pak" SelfReg="false" NextFile="sk.pak"/>
+    <ROW File="sk.pak" Component_="am.pak" FileName="sk.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\sk.pak" SelfReg="false" NextFile="sl.pak"/>
+    <ROW File="sl.pak" Component_="am.pak" FileName="sl.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\sl.pak" SelfReg="false" NextFile="sr.pak"/>
+    <ROW File="snapshot_blob.bin" Component_="cef.pak" FileName="SNAPSH~1.BIN|snapshot_blob.bin" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\snapshot_blob.bin" SelfReg="false" NextFile="v8_context_snapshot.bin"/>
+    <ROW File="sr.pak" Component_="am.pak" FileName="sr.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\sr.pak" SelfReg="false" NextFile="sv.pak"/>
+    <ROW File="sv.pak" Component_="am.pak" FileName="sv.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\sv.pak" SelfReg="false" NextFile="sw.pak"/>
+    <ROW File="sw.pak" Component_="am.pak" FileName="sw.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\sw.pak" SelfReg="false" NextFile="ta.pak"/>
+    <ROW File="ta.pak" Component_="am.pak" FileName="ta.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\ta.pak" SelfReg="false" NextFile="te.pak"/>
+    <ROW File="te.pak" Component_="am.pak" FileName="te.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\te.pak" SelfReg="false" NextFile="th.pak"/>
+    <ROW File="th.pak" Component_="am.pak" FileName="th.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\th.pak" SelfReg="false" NextFile="tr.pak"/>
+    <ROW File="tr.pak" Component_="am.pak" FileName="tr.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\tr.pak" SelfReg="false" NextFile="uk.pak"/>
+    <ROW File="uk.pak" Component_="am.pak" FileName="uk.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\uk.pak" SelfReg="false" NextFile="vi.pak"/>
+    <ROW File="v8_context_snapshot.bin" Component_="cef.pak" FileName="V8_CON~1.BIN|v8_context_snapshot.bin" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\v8_context_snapshot.bin" SelfReg="false" NextFile="log"/>
+    <ROW File="vi.pak" Component_="am.pak" FileName="vi.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\vi.pak" SelfReg="false" NextFile="zhCN.pak"/>
+    <ROW File="zhCN.pak" Component_="am.pak" FileName="zh-CN.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\zh-CN.pak" SelfReg="false" NextFile="zhTW.pak"/>
+    <ROW File="zhTW.pak" Component_="am.pak" FileName="zh-TW.pak" Attributes="0" SourcePath="..\GoogleChrome\bin\x86\Debug\locales\zh-TW.pak" SelfReg="false" NextFile="libEGL.dll_1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
-    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="1" Languages="en;zh" LangOpt="2" InstallationType="4" CabsLocation="1" PackageType="1" FilesInsideExe="true" ExeIconPath="..\GoogleChrome_prj\GoogleChrome\favicon.ico" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName] [|ProductVersion]\install" ExtUI="true" UseLargeSchema="true" ExeName="晶创MES" UACExecutionLevel="2"/>
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="1" Languages="en;zh" LangOpt="2" InstallationType="3" CabsLocation="1" PackageType="1" FilesInsideExe="true" ExeIconPath="..\GoogleChrome\favicon.ico" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName] [|ProductVersion]\install" UseLargeSchema="true" ExeName="晶创MES" UACExecutionLevel="2"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
     <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
@@ -236,11 +320,6 @@
     <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
-    <ROW Action="AI_AiRemoveFilesCommit" Description="Executing file removal operations" DescriptionLocId="ActionText.Description.AI_AiRemoveFilesCommit" Template="Executing file removal: [1]" TemplateLocId="ActionText.Template.AI_AiRemoveFilesCommit"/>
-    <ROW Action="AI_AiRemoveFilesDeferred_Permanent" Description="Preparing files for removal" DescriptionLocId="ActionText.Description.AI_AiRemoveFilesDeferred_Permanent" Template="Preparing file: [1]" TemplateLocId="ActionText.Template.AI_AiRemoveFilesDeferred_Permanent"/>
-    <ROW Action="AI_AiRemoveFilesDeferred_Undoable" Description="Preparing files for removal" DescriptionLocId="ActionText.Description.AI_AiRemoveFilesDeferred_Undoable" Template="Preparing file: [1]" TemplateLocId="ActionText.Template.AI_AiRemoveFilesDeferred_Undoable"/>
-    <ROW Action="AI_AiRemoveFilesImmediate" Description="Preparing files for removal" DescriptionLocId="ActionText.Description.AI_AiRemoveFilesImmediate" Template="Preparing file: [1]" TemplateLocId="ActionText.Template.AI_AiRemoveFilesImmediate"/>
-    <ROW Action="AI_AiRemoveFilesRollback" Description="Restoring removed files" DescriptionLocId="ActionText.Description.AI_AiRemoveFilesRollback" Template="Restoring file: [1]" TemplateLocId="ActionText.Template.AI_AiRemoveFilesRollback"/>
     <ROW Action="AI_ConfigureChainer" Description="Configuring prerequisites launcher" DescriptionLocId="ActionText.Description.AI_ConfigureChainer" Template="Configure Launcher" TemplateLocId="ActionText.Template.AI_ConfigureChainer"/>
     <ROW Action="AI_DeleteLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
     <ROW Action="AI_DeleteRLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
@@ -264,7 +343,6 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
     <ROW Name="Prereq.dll" SourcePath="&lt;AI_CUSTACTS&gt;Prereq.dll"/>
-    <ROW Name="ResourceCleaner.dll" SourcePath="&lt;AI_CUSTACTS&gt;ResourceCleaner.dll"/>
     <ROW Name="ShortcutFlags.dll" SourcePath="&lt;AI_CUSTACTS&gt;ShortcutFlags.dll"/>
     <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
     <ROW Name="aipackagechainer.exe" SourcePath="&lt;AI_CUSTACTS&gt;aipackagechainer.exe"/>
@@ -273,10 +351,10 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
     <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
-    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
-    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
     <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
     <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
     <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
     <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
     <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
@@ -291,31 +369,25 @@
     <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
     <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
     <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
-    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
-    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
     <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
     <ROW Dialog_="ExitDialog" Control_="Finish" Event="DoAction" Argument="AI_CleanPrereq" Condition="1" Ordering="301"/>
     <ROW Dialog_="FatalError" Control_="Finish" Event="DoAction" Argument="AI_CleanPrereq" Condition="1" Ordering="102"/>
     <ROW Dialog_="UserExit" Control_="Finish" Event="DoAction" Argument="AI_CleanPrereq" Condition="1" Ordering="101"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
-    <ROW Directory_="userData_Dir" Component_="userData" ManualDelete="false"/>
     <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
-    <ROW Action="AI_AiRemoveFilesCommit" Type="11777" Source="ResourceCleaner.dll" Target="OnAiRemoveFilesCommit" WithoutSeq="true"/>
-    <ROW Action="AI_AiRemoveFilesDeferred_Permanent" Type="11265" Source="ResourceCleaner.dll" Target="OnAiRemoveFilesPermanent" WithoutSeq="true"/>
-    <ROW Action="AI_AiRemoveFilesDeferred_Undoable" Type="11265" Source="ResourceCleaner.dll" Target="OnAiRemoveFilesUndoable" WithoutSeq="true"/>
-    <ROW Action="AI_AiRemoveFilesImmediate" Type="1" Source="ResourceCleaner.dll" Target="OnAiRemoveFilesImmediate"/>
-    <ROW Action="AI_AiRemoveFilesRollback" Type="11521" Source="ResourceCleaner.dll" Target="OnAiUndoRemoveFiles"/>
     <ROW Action="AI_AppSearchEx" Type="1" Source="Prereq.dll" Target="DoAppSearchEx"/>
     <ROW Action="AI_ApplyShortcutFlags" Type="3073" Source="ShortcutFlags.dll" Target="UpdateShortcutFlags" WithoutSeq="true"/>
     <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH_ORIGINAL" Target="[AI_SETUPEXEPATH]"/>
     <ROW Action="AI_CleanPrereq" Type="65" Source="Prereq.dll" Target="CleanPrereq" WithoutSeq="true"/>
     <ROW Action="AI_ConfigureChainer" Type="1" Source="Prereq.dll" Target="ConfigurePrereqLauncher"/>
-    <ROW Action="AI_DATA_SETTER" Type="51" Source="AI_ExtractFiles" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DATA_SETTER" Type="51" Source="CustomActionData" Target="[~]"/>
     <ROW Action="AI_DATA_SETTER_1" Type="51" Source="CustomActionData" Target="[~]"/>
-    <ROW Action="AI_DATA_SETTER_2" Type="51" Source="CustomActionData" Target="[~]"/>
+    <ROW Action="AI_DATA_SETTER_2" Type="51" Source="AI_ExtractFiles" Target="[AI_SETUPEXEPATH]"/>
     <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
     <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
     <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
@@ -326,7 +398,7 @@
     <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
     <ROW Action="AI_EstimateExtractFiles" Type="1" Source="Prereq.dll" Target="EstimateExtractFiles"/>
     <ROW Action="AI_ExtractCadLzma" Type="51" Source="AI_ExtractLzma" Target="[AI_SETUPEXEPATH]"/>
-    <ROW Action="AI_ExtractFiles" Type="1025" Source="Prereq.dll" Target="ExtractSourceFiles" AdditionalSeq="AI_DATA_SETTER"/>
+    <ROW Action="AI_ExtractFiles" Type="1025" Source="Prereq.dll" Target="ExtractSourceFiles" AdditionalSeq="AI_DATA_SETTER_2"/>
     <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
     <ROW Action="AI_ExtractPrereq" Type="65" Source="Prereq.dll" Target="ExtractPrereq"/>
     <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
@@ -350,23 +422,31 @@
     <ROW Action="AI_VerifyPrereq" Type="1" Source="Prereq.dll" Target="VerifyPrereq"/>
     <ROW Action="AI_XmlCommit" Type="11777" Source="xmlCfg.dll" Target="OnXmlCommit" WithoutSeq="true"/>
     <ROW Action="AI_XmlConfig" Type="11265" Source="xmlCfg.dll" Target="OnXmlConfig" WithoutSeq="true"/>
-    <ROW Action="AI_XmlInstall" Type="1" Source="xmlCfg.dll" Target="OnXmlInstall" AdditionalSeq="AI_DATA_SETTER_1"/>
+    <ROW Action="AI_XmlInstall" Type="1" Source="xmlCfg.dll" Target="OnXmlInstall" AdditionalSeq="AI_DATA_SETTER"/>
     <ROW Action="AI_XmlRemove" Type="11265" Source="xmlCfg.dll" Target="OnXmlRemove" WithoutSeq="true"/>
     <ROW Action="AI_XmlRollback" Type="11521" Source="xmlCfg.dll" Target="OnXmlRollback" WithoutSeq="true"/>
-    <ROW Action="AI_XmlUninstall" Type="1" Source="xmlCfg.dll" Target="OnXmlUninstall" AdditionalSeq="AI_DATA_SETTER_2"/>
+    <ROW Action="AI_XmlUninstall" Type="1" Source="xmlCfg.dll" Target="OnXmlUninstall" AdditionalSeq="AI_DATA_SETTER_1"/>
     <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
     <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
     <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
-    <ROW Name="GoogleChrome.exe" SourcePath="..\GoogleChrome_prj\GoogleChrome\favicon.ico" Index="0"/>
+    <ROW Name="GoogleChrome.exe" SourcePath="..\GoogleChrome\favicon.ico" Index="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
     <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
     <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
     <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
-    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
     <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_XmlInstall" Condition="(REMOVE &lt;&gt; &quot;ALL&quot;)" Sequence="5102"/>
+    <ROW Action="AI_DATA_SETTER" Condition="(REMOVE &lt;&gt; &quot;ALL&quot;)" Sequence="5101"/>
+    <ROW Action="AI_XmlUninstall" Condition="(REMOVE)" Sequence="3102"/>
+    <ROW Action="AI_DATA_SETTER_1" Condition="(REMOVE)" Sequence="3101"/>
+    <ROW Action="AI_PrepareShortcutFlags" Condition="(VersionNT &gt; 501) AND ((NOT Installed) OR (Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;)))" Sequence="4501"/>
+    <ROW Action="AI_PinShortcuts" Condition="(VersionNT &gt; 600) AND ((NOT Installed) OR (Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;)))" Sequence="6499"/>
+    <ROW Action="AI_UnpinShortcuts" Condition="(VersionNT &gt; 600) AND (REMOVE = &quot;ALL&quot;)" Sequence="3199"/>
     <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99" Builds="DefaultBuild"/>
     <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="102" Builds="DefaultBuild"/>
     <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="199" Builds="DefaultBuild"/>
@@ -377,23 +457,12 @@
     <ROW Action="AI_DeleteRLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="1548" Builds="DefaultBuild"/>
     <ROW Action="AI_DeleteLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="6597" Builds="DefaultBuild"/>
     <ROW Action="AI_ExtractFiles" Sequence="3998" Builds="DefaultBuild"/>
-    <ROW Action="AI_DATA_SETTER" Sequence="3997"/>
+    <ROW Action="AI_DATA_SETTER_2" Sequence="3997"/>
     <ROW Action="AI_EstimateExtractFiles" Sequence="3999" Builds="DefaultBuild"/>
-    <ROW Action="AI_PrepareShortcutFlags" Condition="(VersionNT &gt; 501) AND ((NOT Installed) OR (Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;)))" Sequence="4501"/>
-    <ROW Action="AI_PinShortcuts" Condition="(VersionNT &gt; 600) AND ((NOT Installed) OR (Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;)))" Sequence="6499"/>
-    <ROW Action="AI_UnpinShortcuts" Condition="(VersionNT &gt; 600) AND (REMOVE = &quot;ALL&quot;)" Sequence="3199"/>
     <ROW Action="AI_ConfigureChainer" Condition="((UILevel = 2) OR (UILevel = 3)) AND (NOT UPGRADINGPRODUCTCODE)" Sequence="6598"/>
     <ROW Action="AI_LaunchChainer" Condition="AI_PREREQ_CHAINER AND (NOT UPGRADINGPRODUCTCODE)" Sequence="6599"/>
     <ROW Action="AI_VerifyPrereq" Sequence="1101"/>
     <ROW Action="AI_AppSearchEx" Sequence="101"/>
-    <ROW Action="AI_XmlInstall" Condition="(REMOVE &lt;&gt; &quot;ALL&quot;)" Sequence="5102"/>
-    <ROW Action="AI_DATA_SETTER_1" Condition="(REMOVE &lt;&gt; &quot;ALL&quot;)" Sequence="5101"/>
-    <ROW Action="AI_XmlUninstall" Condition="(REMOVE)" Sequence="3102"/>
-    <ROW Action="AI_DATA_SETTER_2" Condition="(REMOVE)" Sequence="3101"/>
-    <ROW Action="AI_AiRemoveFilesRollback" Sequence="3099"/>
-    <ROW Action="RemoveExistingProducts" Condition="AI_UPGRADE&lt;&gt;&quot;No&quot;" Sequence="1401" SeqType="0" MsiKey="RemoveExistingProducts"/>
-    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="201"/>
-    <ROW Action="AI_AiRemoveFilesImmediate" Sequence="3499"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
     <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
@@ -425,13 +494,10 @@
     <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
     <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
   </COMPONENT>
-  <COMPONENT cid="caphyon.advinst.msicomp.MsiRemoveFileComponent">
-    <ROW FileKey="_" Component_="CefSharp.dll" DirProperty="APPDIR" InstallMode="2"/>
-  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
-    <ROW Shortcut="MES" Directory_="SHORTCUTDIR" Name="晶创MES" Component_="GoogleChrome.exe" Target="[#GoogleChrome.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
-    <ROW Shortcut="MES_1" Directory_="DesktopFolder" Name="晶创MES" Component_="GoogleChrome.exe" Target="[#GoogleChrome.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
-    <ROW Shortcut="MES_2" Directory_="StartMenuFolder" Name="晶创MES" Component_="GoogleChrome.exe" Target="[#GoogleChrome.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="MES" Directory_="SHORTCUTDIR" Name="晶创MES" Component_="GoogleChrome.exe" Target="[#GoogleChrome.exe]" Hotkey="0" Icon_="GoogleChrome.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR" CustomFlags="1"/>
+    <ROW Shortcut="MES_1" Directory_="DesktopFolder" Name="晶创MES" Component_="GoogleChrome.exe" Target="[#GoogleChrome.exe]" Hotkey="0" Icon_="GoogleChrome.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR" CustomFlags="1"/>
+    <ROW Shortcut="MES_2" Directory_="StartMenuFolder" Name="晶创MES" Component_="GoogleChrome.exe" Target="[#GoogleChrome.exe]" Hotkey="0" Icon_="GoogleChrome.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR" CustomFlags="1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
     <ATTRIBUTE name="UsedTheme" value="classic"/>
@@ -3525,8 +3591,8 @@
     <ROW XmlAttribute="name_998" XmlElement="member_626" Name="name" Flags="15" Order="0" Value="F:CefSharp.CefErrorCode.WsThrottleQueueTooLarge"/>
     <ROW XmlAttribute="name_999" XmlElement="member_627" Name="name" Flags="15" Order="0" Value="F:CefSharp.CefErrorCode.TooManySocketStreams"/>
     <ROW XmlAttribute="sku" XmlElement="supportedRuntime" Name="sku" Flags="14" Order="1" Value=".NETFramework,Version=v4.5.2"/>
-    <ROW XmlAttribute="value" XmlElement="add" Name="value" Flags="14" Order="1" Value="10.177.40.7"/>
-    <ROW XmlAttribute="value_1" XmlElement="add_1" Name="value" Flags="14" Order="1" Value="81"/>
+    <ROW XmlAttribute="value" XmlElement="add" Name="value" Flags="14" Order="1" Value="localhost"/>
+    <ROW XmlAttribute="value_1" XmlElement="add_1" Name="value" Flags="14" Order="1" Value="8080"/>
     <ROW XmlAttribute="version" XmlElement="supportedRuntime" Name="version" Flags="14" Order="0" Value="v4.0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.XmlElementComponent">
@@ -8675,9 +8741,9 @@
     <ROW XmlElement="value_9" ParentElement="member_192" Name="value" Condition="1" Order="1" Flags="14" Text="The request context."/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.XmlFileComponent">
-    <ROW XmlFile="CefSharp.Core.xml" FileName="CEFSHA~1.XML|CefSharp.Core.xml" DirProperty="APPDIR" Component="AI_ExePath" RootElement="doc" Flags="89" Version="1.0" Encoding="UTF-8" IndentUnits="2"/>
-    <ROW XmlFile="CefSharp.WinForms.XML" FileName="CEFSHA~2.XML|CefSharp.WinForms.XML" DirProperty="APPDIR" Component="AI_ExePath" RootElement="doc_1" Flags="89" Version="1.0" Encoding="UTF-8" IndentUnits="2"/>
-    <ROW XmlFile="CefSharp.XML" FileName="CefSharp.XML" DirProperty="APPDIR" Component="AI_ExePath" RootElement="doc_2" Flags="89" Version="1.0" Encoding="UTF-8" IndentUnits="2"/>
-    <ROW XmlFile="GoogleChrome.exe.Config" FileName="GOOGLE~1.CON|GoogleChrome.exe.Config" DirProperty="APPDIR" Component="AI_ExePath" RootElement="configuration" Flags="89" Version="1.0" Encoding="utf-8" IndentUnits="2"/>
+    <ROW XmlFile="CefSharp.Core.xml" FileName="CEFSHA~1.XML|CefSharp.Core.xml" DirProperty="APPDIR" Component="CefSharp.Core.dll" RootElement="doc" Flags="89" Version="1.0" Encoding="UTF-8" IndentUnits="2"/>
+    <ROW XmlFile="CefSharp.WinForms.XML" FileName="CEFSHA~2.XML|CefSharp.WinForms.XML" DirProperty="APPDIR" Component="CefSharp.Core.dll" RootElement="doc_1" Flags="89" Version="1.0" Encoding="UTF-8" IndentUnits="2"/>
+    <ROW XmlFile="CefSharp.XML" FileName="CefSharp.XML" DirProperty="APPDIR" Component="CefSharp.Core.dll" RootElement="doc_2" Flags="89" Version="1.0" Encoding="UTF-8" IndentUnits="2"/>
+    <ROW XmlFile="GoogleChrome.exe.Config" FileName="GOOGLE~1.CON|GoogleChrome.exe.Config" DirProperty="APPDIR" Component="CefSharp.Core.dll" RootElement="configuration" Flags="89" Version="1.0" Encoding="utf-8" IndentUnits="2"/>
   </COMPONENT>
 </DOCUMENT>
