@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="15.2" version="15.2" PreviousModules="simple" Modules="professional" RootPath="." Language="en" Id="{43CBE1E3-3979-47B3-89EA-8186770E02AB}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="AppXAppDetailsComponent;AppXCapabilitiesComponent;AppXDependenciesComponent;AppXProductDetailsComponent;AppXVisualAssetsComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_FINDEXE_TITLE" Value="Select the installation package for [|ProductName]" ValueLocId="AI.Property.FindExeTitle"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPNOREPAIR" MultiBuildValue="DefaultBuild:1"/>
+    <ROW Property="Manufacturer" Value="浙江晶创自动化设备有限公司"/>
+    <ROW Property="ProductCode" Value="1033:{6E901912-025F-41D8-8E70-DD3C2047B67C} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="晶创MES"/>
+    <ROW Property="ProductVersion" Value="1.0.0" Type="32"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
+    <ROW Property="UpgradeCode" Value="{1E568F26-47F6-4562-BE88-AA48A2699B19}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003 RTM, Windows XP/2003 SP1, Windows XP SP2 x86" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003 RTM, Windows XP/2003 SP1, Windows XP SP2 x86" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="locales_Dir" Directory_Parent="APPDIR" DefaultDir="locales"/>
+    <ROW Directory="swiftshader_Dir" Directory_Parent="APPDIR" DefaultDir="SWIFTS~1|swiftshader"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AI_ExePath" ComponentId="{B03D2667-AD52-45FD-8A1C-A68F21DEEBDC}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
+    <ROW Component="CefSharp.BrowserSubprocess.Core.dll" ComponentId="{4F5493D6-5F10-44FE-8F9A-2484B0C78343}" Directory_="APPDIR" Attributes="0" KeyPath="CefSharp.BrowserSubprocess.Core.dll"/>
+    <ROW Component="CefSharp.BrowserSubprocess.exe" ComponentId="{89F55D16-44BA-45B1-BAF8-BFC75A8F93F1}" Directory_="APPDIR" Attributes="0" KeyPath="CefSharp.BrowserSubprocess.exe"/>
+    <ROW Component="CefSharp.Core.dll" ComponentId="{AEC9EEC1-3AA6-49FE-9F30-D83C60DADBA3}" Directory_="APPDIR" Attributes="0" KeyPath="CefSharp.Core.dll"/>
+    <ROW Component="CefSharp.WinForms.dll" ComponentId="{BFD9FE3D-2152-4F65-8CBB-D9AA5FA0D7DA}" Directory_="APPDIR" Attributes="0" KeyPath="CefSharp.WinForms.dll"/>
+    <ROW Component="CefSharp.dll" ComponentId="{867DE876-9117-42CE-91D0-C020F1BC88BC}" Directory_="APPDIR" Attributes="0" KeyPath="CefSharp.dll"/>
+    <ROW Component="GoogleChrome.exe" ComponentId="{41F03222-A727-48A4-930B-1C4D7ACD3B92}" Directory_="APPDIR" Attributes="0" KeyPath="GoogleChrome.exe"/>
+    <ROW Component="ProductInformation" ComponentId="{8D09E512-2760-4B5E-996C-96C2C4979615}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{F0F5D99B-C5BF-43FC-A7C8-8B62FE909E60}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="am.pak" ComponentId="{F74260A9-B523-4541-9D6E-8D655A5C4976}" Directory_="locales_Dir" Attributes="0" KeyPath="am.pak" Type="0"/>
+    <ROW Component="cef.pak" ComponentId="{5272E509-3FE2-46A9-91FC-3CE11302F4AE}" Directory_="APPDIR" Attributes="0" KeyPath="cef.pak" Type="0"/>
+    <ROW Component="chrome_elf.dll" ComponentId="{66A98E2D-190C-4D8A-8946-3C4C7083093C}" Directory_="APPDIR" Attributes="0" KeyPath="chrome_elf.dll"/>
+    <ROW Component="d3dcompiler_47.dll" ComponentId="{B35CCE8A-A9AF-46C6-A30D-3C935BA3EE58}" Directory_="APPDIR" Attributes="0" KeyPath="d3dcompiler_47.dll"/>
+    <ROW Component="libEGL.dll" ComponentId="{41686F65-8147-40A0-ABB4-82CFDBFAB6C9}" Directory_="swiftshader_Dir" Attributes="0" KeyPath="libEGL.dll"/>
+    <ROW Component="libEGL.dll_1" ComponentId="{4CA5FE88-3E37-48A1-A515-6FC71A25CAF8}" Directory_="APPDIR" Attributes="0" KeyPath="libEGL.dll_1"/>
+    <ROW Component="libGLESv2.dll" ComponentId="{0B54E5CC-8B0E-486D-BFE5-F17A692DD5A8}" Directory_="swiftshader_Dir" Attributes="0" KeyPath="libGLESv2.dll"/>
+    <ROW Component="libGLESv2.dll_1" ComponentId="{D0D916E3-00B2-4697-A572-49B33B3A8467}" Directory_="APPDIR" Attributes="0" KeyPath="libGLESv2.dll_1"/>
+    <ROW Component="libcef.dll" ComponentId="{C823322F-9331-4CCC-9D13-B3BBC7BEEE24}" Directory_="APPDIR" Attributes="0" KeyPath="libcef.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AI_ExePath CefSharp.BrowserSubprocess.Core.dll CefSharp.BrowserSubprocess.exe CefSharp.Core.dll CefSharp.WinForms.dll CefSharp.dll GoogleChrome.exe ProductInformation SHORTCUTDIR am.pak cef.pak chrome_elf.dll d3dcompiler_47.dll libEGL.dll libEGL.dll_1 libGLESv2.dll libGLESv2.dll_1 libcef.dll"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="CefSharp.BrowserSubprocess.Core.dll" Component_="CefSharp.BrowserSubprocess.Core.dll" FileName="CEFSHA~1.DLL|CefSharp.BrowserSubprocess.Core.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.BrowserSubprocess.Core.dll" SelfReg="false" NextFile="CefSharp.BrowserSubprocess.Core.pdb"/>
+    <ROW File="CefSharp.BrowserSubprocess.Core.pdb" Component_="CefSharp.BrowserSubprocess.Core.dll" FileName="CEFSHA~1.PDB|CefSharp.BrowserSubprocess.Core.pdb" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.BrowserSubprocess.Core.pdb" SelfReg="false" NextFile="CefSharp.BrowserSubprocess.exe"/>
+    <ROW File="CefSharp.BrowserSubprocess.exe" Component_="CefSharp.BrowserSubprocess.exe" FileName="CEFSHA~1.EXE|CefSharp.BrowserSubprocess.exe" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.BrowserSubprocess.exe" SelfReg="false" NextFile="CefSharp.BrowserSubprocess.pdb" DigSign="true"/>
+    <ROW File="CefSharp.BrowserSubprocess.pdb" Component_="CefSharp.BrowserSubprocess.exe" FileName="CEFSHA~2.PDB|CefSharp.BrowserSubprocess.pdb" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.BrowserSubprocess.pdb" SelfReg="false" NextFile="CefSharp.Core.dll"/>
+    <ROW File="CefSharp.Core.dll" Component_="CefSharp.Core.dll" FileName="CEFSHA~2.DLL|CefSharp.Core.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.Core.dll" SelfReg="false" NextFile="CefSharp.Core.pdb"/>
+    <ROW File="CefSharp.Core.pdb" Component_="CefSharp.Core.dll" FileName="CEFSHA~3.PDB|CefSharp.Core.pdb" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.Core.pdb" SelfReg="false" NextFile="CefSharp.Core.xml"/>
+    <ROW File="CefSharp.Core.xml" Component_="cef.pak" FileName="CEFSHA~1.XML|CefSharp.Core.xml" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.Core.xml" SelfReg="false" NextFile="CefSharp.dll"/>
+    <ROW File="CefSharp.WinForms.dll" Component_="CefSharp.WinForms.dll" FileName="CEFSHA~3.DLL|CefSharp.WinForms.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.WinForms.dll" SelfReg="false" NextFile="CefSharp.WinForms.pdb"/>
+    <ROW File="CefSharp.WinForms.pdb" Component_="CefSharp.WinForms.dll" FileName="CEFSHA~4.PDB|CefSharp.WinForms.pdb" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.WinForms.pdb" SelfReg="false" NextFile="CefSharp.WinForms.xml"/>
+    <ROW File="CefSharp.WinForms.xml" Component_="cef.pak" FileName="CEFSHA~2.XML|CefSharp.WinForms.xml" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.WinForms.xml" SelfReg="false" NextFile="CefSharp.xml"/>
+    <ROW File="CefSharp.dll" Component_="CefSharp.dll" FileName="CefSharp.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.dll" SelfReg="false" NextFile="CefSharp.pdb"/>
+    <ROW File="CefSharp.pdb" Component_="CefSharp.dll" FileName="CefSharp.pdb" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.pdb" SelfReg="false" NextFile="CefSharp.WinForms.dll"/>
+    <ROW File="CefSharp.xml" Component_="cef.pak" FileName="CefSharp.xml" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\CefSharp.xml" SelfReg="false" NextFile="chrome_elf.dll"/>
+    <ROW File="GoogleChrome.exe" Component_="GoogleChrome.exe" FileName="GOOGLE~1.EXE|GoogleChrome.exe" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\GoogleChrome.exe" SelfReg="false" NextFile="GoogleChrome.exe.config" DigSign="true"/>
+    <ROW File="GoogleChrome.exe.config" Component_="cef.pak" FileName="GOOGLE~1.CON|GoogleChrome.exe.config" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\GoogleChrome.exe.config" SelfReg="false" NextFile="GoogleChrome.pdb"/>
+    <ROW File="GoogleChrome.pdb" Component_="GoogleChrome.exe" FileName="GOOGLE~1.PDB|GoogleChrome.pdb" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\GoogleChrome.pdb" SelfReg="false" NextFile="icudtl.dat"/>
+    <ROW File="am.pak" Component_="am.pak" FileName="am.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\am.pak" SelfReg="false" NextFile="ar.pak"/>
+    <ROW File="ar.pak" Component_="am.pak" FileName="ar.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\ar.pak" SelfReg="false" NextFile="bg.pak"/>
+    <ROW File="bg.pak" Component_="am.pak" FileName="bg.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\bg.pak" SelfReg="false" NextFile="bn.pak"/>
+    <ROW File="bn.pak" Component_="am.pak" FileName="bn.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\bn.pak" SelfReg="false" NextFile="ca.pak"/>
+    <ROW File="ca.pak" Component_="am.pak" FileName="ca.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\ca.pak" SelfReg="false" NextFile="cs.pak"/>
+    <ROW File="cef.pak" Component_="cef.pak" FileName="cef.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\cef.pak" SelfReg="false" NextFile="cef_100_percent.pak"/>
+    <ROW File="cef_100_percent.pak" Component_="cef.pak" FileName="CEF_10~1.PAK|cef_100_percent.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\cef_100_percent.pak" SelfReg="false" NextFile="cef_200_percent.pak"/>
+    <ROW File="cef_200_percent.pak" Component_="cef.pak" FileName="CEF_20~1.PAK|cef_200_percent.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\cef_200_percent.pak" SelfReg="false" NextFile="cef_extensions.pak"/>
+    <ROW File="cef_extensions.pak" Component_="cef.pak" FileName="CEF_EX~1.PAK|cef_extensions.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\cef_extensions.pak" SelfReg="false" NextFile="CefSharp.BrowserSubprocess.Core.dll"/>
+    <ROW File="chrome_elf.dll" Component_="chrome_elf.dll" FileName="CHROME~1.DLL|chrome_elf.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\chrome_elf.dll" SelfReg="false" NextFile="d3dcompiler_47.dll"/>
+    <ROW File="cs.pak" Component_="am.pak" FileName="cs.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\cs.pak" SelfReg="false" NextFile="da.pak"/>
+    <ROW File="d3dcompiler_47.dll" Component_="d3dcompiler_47.dll" FileName="D3DCOM~1.DLL|d3dcompiler_47.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\d3dcompiler_47.dll" SelfReg="false" NextFile="debug.log"/>
+    <ROW File="da.pak" Component_="am.pak" FileName="da.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\da.pak" SelfReg="false" NextFile="de.pak"/>
+    <ROW File="de.pak" Component_="am.pak" FileName="de.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\de.pak" SelfReg="false" NextFile="el.pak"/>
+    <ROW File="debug.log" Component_="cef.pak" FileName="debug.log" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\debug.log" SelfReg="false" NextFile="devtools_resources.pak"/>
+    <ROW File="devtools_resources.pak" Component_="cef.pak" FileName="DEVTOO~1.PAK|devtools_resources.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\devtools_resources.pak" SelfReg="false" NextFile="GoogleChrome.exe"/>
+    <ROW File="el.pak" Component_="am.pak" FileName="el.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\el.pak" SelfReg="false" NextFile="enGB.pak"/>
+    <ROW File="enGB.pak" Component_="am.pak" FileName="en-GB.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\en-GB.pak" SelfReg="false" NextFile="enUS.pak"/>
+    <ROW File="enUS.pak" Component_="am.pak" FileName="en-US.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\en-US.pak" SelfReg="false" NextFile="es419.pak"/>
+    <ROW File="es.pak" Component_="am.pak" FileName="es.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\es.pak" SelfReg="false" NextFile="et.pak"/>
+    <ROW File="es419.pak" Component_="am.pak" FileName="es-419.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\es-419.pak" SelfReg="false" NextFile="es.pak"/>
+    <ROW File="et.pak" Component_="am.pak" FileName="et.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\et.pak" SelfReg="false" NextFile="fa.pak"/>
+    <ROW File="fa.pak" Component_="am.pak" FileName="fa.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\fa.pak" SelfReg="false" NextFile="fi.pak"/>
+    <ROW File="fi.pak" Component_="am.pak" FileName="fi.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\fi.pak" SelfReg="false" NextFile="fil.pak"/>
+    <ROW File="fil.pak" Component_="am.pak" FileName="fil.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\fil.pak" SelfReg="false" NextFile="fr.pak"/>
+    <ROW File="fr.pak" Component_="am.pak" FileName="fr.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\fr.pak" SelfReg="false" NextFile="gu.pak"/>
+    <ROW File="gu.pak" Component_="am.pak" FileName="gu.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\gu.pak" SelfReg="false" NextFile="he.pak"/>
+    <ROW File="he.pak" Component_="am.pak" FileName="he.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\he.pak" SelfReg="false" NextFile="hi.pak"/>
+    <ROW File="hi.pak" Component_="am.pak" FileName="hi.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\hi.pak" SelfReg="false" NextFile="hr.pak"/>
+    <ROW File="hr.pak" Component_="am.pak" FileName="hr.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\hr.pak" SelfReg="false" NextFile="hu.pak"/>
+    <ROW File="hu.pak" Component_="am.pak" FileName="hu.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\hu.pak" SelfReg="false" NextFile="id.pak"/>
+    <ROW File="icudtl.dat" Component_="cef.pak" FileName="icudtl.dat" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\icudtl.dat" SelfReg="false" NextFile="libcef.dll"/>
+    <ROW File="id.pak" Component_="am.pak" FileName="id.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\id.pak" SelfReg="false" NextFile="it.pak"/>
+    <ROW File="it.pak" Component_="am.pak" FileName="it.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\it.pak" SelfReg="false" NextFile="ja.pak"/>
+    <ROW File="ja.pak" Component_="am.pak" FileName="ja.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\ja.pak" SelfReg="false" NextFile="kn.pak"/>
+    <ROW File="kn.pak" Component_="am.pak" FileName="kn.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\kn.pak" SelfReg="false" NextFile="ko.pak"/>
+    <ROW File="ko.pak" Component_="am.pak" FileName="ko.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\ko.pak" SelfReg="false" NextFile="lt.pak"/>
+    <ROW File="libEGL.dll" Component_="libEGL.dll" FileName="libEGL.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\swiftshader\libEGL.dll" SelfReg="false" NextFile="libGLESv2.dll"/>
+    <ROW File="libEGL.dll_1" Component_="libEGL.dll_1" FileName="libEGL.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\libEGL.dll" SelfReg="false" NextFile="libGLESv2.dll_1"/>
+    <ROW File="libGLESv2.dll" Component_="libGLESv2.dll" FileName="LIBGLE~1.DLL|libGLESv2.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\swiftshader\libGLESv2.dll" SelfReg="false" NextFile="cef.pak"/>
+    <ROW File="libGLESv2.dll_1" Component_="libGLESv2.dll_1" FileName="LIBGLE~1.DLL|libGLESv2.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\libGLESv2.dll" SelfReg="false" NextFile="natives_blob.bin"/>
+    <ROW File="libcef.dll" Component_="libcef.dll" FileName="libcef.dll" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\libcef.dll" SelfReg="false" NextFile="libEGL.dll_1"/>
+    <ROW File="lt.pak" Component_="am.pak" FileName="lt.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\lt.pak" SelfReg="false" NextFile="lv.pak"/>
+    <ROW File="lv.pak" Component_="am.pak" FileName="lv.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\lv.pak" SelfReg="false" NextFile="ml.pak"/>
+    <ROW File="ml.pak" Component_="am.pak" FileName="ml.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\ml.pak" SelfReg="false" NextFile="mr.pak"/>
+    <ROW File="mr.pak" Component_="am.pak" FileName="mr.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\mr.pak" SelfReg="false" NextFile="ms.pak"/>
+    <ROW File="ms.pak" Component_="am.pak" FileName="ms.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\ms.pak" SelfReg="false" NextFile="nb.pak"/>
+    <ROW File="natives_blob.bin" Component_="cef.pak" FileName="NATIVE~1.BIN|natives_blob.bin" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\natives_blob.bin" SelfReg="false" NextFile="snapshot_blob.bin"/>
+    <ROW File="nb.pak" Component_="am.pak" FileName="nb.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\nb.pak" SelfReg="false" NextFile="nl.pak"/>
+    <ROW File="nl.pak" Component_="am.pak" FileName="nl.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\nl.pak" SelfReg="false" NextFile="pl.pak"/>
+    <ROW File="pl.pak" Component_="am.pak" FileName="pl.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\pl.pak" SelfReg="false" NextFile="ptBR.pak"/>
+    <ROW File="ptBR.pak" Component_="am.pak" FileName="pt-BR.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\pt-BR.pak" SelfReg="false" NextFile="ptPT.pak"/>
+    <ROW File="ptPT.pak" Component_="am.pak" FileName="pt-PT.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\pt-PT.pak" SelfReg="false" NextFile="ro.pak"/>
+    <ROW File="ro.pak" Component_="am.pak" FileName="ro.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\ro.pak" SelfReg="false" NextFile="ru.pak"/>
+    <ROW File="ru.pak" Component_="am.pak" FileName="ru.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\ru.pak" SelfReg="false" NextFile="sk.pak"/>
+    <ROW File="sk.pak" Component_="am.pak" FileName="sk.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\sk.pak" SelfReg="false" NextFile="sl.pak"/>
+    <ROW File="sl.pak" Component_="am.pak" FileName="sl.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\sl.pak" SelfReg="false" NextFile="sr.pak"/>
+    <ROW File="snapshot_blob.bin" Component_="cef.pak" FileName="SNAPSH~1.BIN|snapshot_blob.bin" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\snapshot_blob.bin" SelfReg="false" NextFile="v8_context_snapshot.bin"/>
+    <ROW File="sr.pak" Component_="am.pak" FileName="sr.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\sr.pak" SelfReg="false" NextFile="sv.pak"/>
+    <ROW File="sv.pak" Component_="am.pak" FileName="sv.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\sv.pak" SelfReg="false" NextFile="sw.pak"/>
+    <ROW File="sw.pak" Component_="am.pak" FileName="sw.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\sw.pak" SelfReg="false" NextFile="ta.pak"/>
+    <ROW File="ta.pak" Component_="am.pak" FileName="ta.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\ta.pak" SelfReg="false" NextFile="te.pak"/>
+    <ROW File="te.pak" Component_="am.pak" FileName="te.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\te.pak" SelfReg="false" NextFile="th.pak"/>
+    <ROW File="th.pak" Component_="am.pak" FileName="th.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\th.pak" SelfReg="false" NextFile="tr.pak"/>
+    <ROW File="tr.pak" Component_="am.pak" FileName="tr.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\tr.pak" SelfReg="false" NextFile="uk.pak"/>
+    <ROW File="uk.pak" Component_="am.pak" FileName="uk.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\uk.pak" SelfReg="false" NextFile="vi.pak"/>
+    <ROW File="v8_context_snapshot.bin" Component_="cef.pak" FileName="V8_CON~1.BIN|v8_context_snapshot.bin" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\v8_context_snapshot.bin" SelfReg="false"/>
+    <ROW File="vi.pak" Component_="am.pak" FileName="vi.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\vi.pak" SelfReg="false" NextFile="zhCN.pak"/>
+    <ROW File="zhCN.pak" Component_="am.pak" FileName="zh-CN.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\zh-CN.pak" SelfReg="false" NextFile="zhTW.pak"/>
+    <ROW File="zhTW.pak" Component_="am.pak" FileName="zh-TW.pak" Attributes="0" SourcePath="..\GoogleChrome_prj\GoogleChrome\bin\x86\Debug\locales\zh-TW.pak" SelfReg="false" NextFile="libEGL.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" Languages="en" InstallationType="4" CabsLocation="1" PackageType="1" FilesInsideExe="true" ExeIconPath="..\GoogleChrome_prj\GoogleChrome\favicon.ico" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName] [|ProductVersion]\install" UseLargeSchema="true" ExeName="晶创MES"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
+    <ROW Action="AI_DeleteLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_DeleteRLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractFiles" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractLzma" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_LM" Builds="DefaultBuild"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="Prereq.dll" SourcePath="&lt;AI_CUSTACTS&gt;Prereq.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+    <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH_ORIGINAL" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DATA_SETTER" Type="51" Source="AI_ExtractFiles" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DeleteRCadLzma" Type="51" Source="AI_DeleteRLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteRLzma" Type="1281" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_EstimateExtractFiles" Type="1" Source="Prereq.dll" Target="EstimateExtractFiles"/>
+    <ROW Action="AI_ExtractCadLzma" Type="51" Source="AI_ExtractLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_ExtractFiles" Type="1025" Source="Prereq.dll" Target="ExtractSourceFiles" AdditionalSeq="AI_DATA_SETTER"/>
+    <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
+    <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH" Target="[AI_SETUPEXEPATH_ORIGINAL]"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="GoogleChrome.exe" SourcePath="..\GoogleChrome_prj\GoogleChrome\favicon.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99" Builds="DefaultBuild"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="199" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="198" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="197" Builds="DefaultBuild"/>
+    <ROW Action="AI_FindExeLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="196" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="1549" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="1548" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="6599" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractFiles" Sequence="3998" Builds="DefaultBuild"/>
+    <ROW Action="AI_DATA_SETTER" Sequence="3997"/>
+    <ROW Action="AI_EstimateExtractFiles" Sequence="3999" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] cannot be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT64 OR ((VersionNT &lt;&gt; 501) OR (ServicePackLevel = 3))) AND ((VersionNT &lt;&gt; 502) OR (ServicePackLevel = 2))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="SETUPEXEDIR OR (REMOVE=&quot;ALL&quot;)" Description="This package can only be run from a bootstrapper." DescriptionLocId="AI.LaunchCondition.RequireBootstrapper" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegLocatorComponent">
+    <ROW Signature_="AI_EXE_PATH_CU" Root="1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+    <ROW Signature_="AI_EXE_PATH_LM" Root="2" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="MES" Directory_="SHORTCUTDIR" Name="晶创MES" Component_="GoogleChrome.exe" Target="[#GoogleChrome.exe]" Hotkey="0" Icon_="GoogleChrome.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="MES1" Directory_="DesktopFolder" Name="晶创MES" Component_="GoogleChrome.exe" Target="[#GoogleChrome.exe]" Hotkey="0" Icon_="GoogleChrome.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>
