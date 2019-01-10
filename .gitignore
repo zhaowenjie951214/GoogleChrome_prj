@@ -261,3 +261,4 @@ __pycache__/
 *.pyc
 /InstallPackDemo/晶创MES-SetupFiles
 /InstallPackDemo/晶创MES-cache
+/packages
