@@ -145,16 +145,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\x86\Debug\assets\css\404.css" />
-    <Content Include="bin\x86\Debug\assets\error.html" />
-    <Content Include="bin\x86\Debug\assets\images\bird.png" />
-    <Content Include="bin\x86\Debug\assets\images\san.png" />
-    <Content Include="bin\x86\Debug\assets\images\yun0.png" />
-    <Content Include="bin\x86\Debug\assets\images\yun1.png" />
-    <Content Include="bin\x86\Debug\assets\images\yun2.png" />
-    <Content Include="bin\x86\Debug\assets\js\jquery-1.10.2.js" />
-    <Content Include="bin\x86\Debug\assets\js\jquery-1.7.2.min.js" />
-    <Content Include="bin\x86\Debug\assets\Loading.html" />
+    <Content Include="bin\x86\Debug\plugins\pepflashplayer32_32_0_0_114.dll" />
     <Content Include="favicon.ico" />
     <Content Include="img\bntMen.png" />
     <Content Include="img\close.png" />

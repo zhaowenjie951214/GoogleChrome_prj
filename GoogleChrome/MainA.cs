@@ -1,6 +1,7 @@
 ﻿using CefSharp;
 using CefSharp.WinForms;
 using GoogleChrome;
+using GoogleChrome.Properties;
 using NativeWifi;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,7 @@ namespace GoogleChrome_prj
         public MainA()
         {
             InitializeComponent();
+
             CefSettings setting = new CefSettings();
             setting.Locale = "zh-CN";
             setting.CachePath = Directory.GetCurrentDirectory() + @"\CHBrowser\BrowserCache";//缓存路径
@@ -43,7 +45,13 @@ namespace GoogleChrome_prj
             setting.PersistSessionCookies = true;//
             setting.UserAgent = "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36";//浏览器内核
             setting.UserDataPath = Directory.GetCurrentDirectory() + @"\CHBrowser\userData";//个人数据
-            /////初始化
+            setting.CefCommandLineArgs.Add("ppapi-flash-path", @"plugins\pepflashplayer32_32_0_0_114.dll");
+            setting.CefCommandLineArgs.Add("ppapi-flash-version", "32.0.0.114");
+
+            setting.CefCommandLineArgs.Add("enable-media-stream", "enable-media-stream");
+            setting.IgnoreCertificateErrors = true;
+            setting.LogSeverity = LogSeverity.Verbose;
+
             CefSharp.Cef.Initialize(setting);
 
             //string url = Application.StartupPath + @"\assets\loading.html";
@@ -54,7 +62,6 @@ namespace GoogleChrome_prj
             CefSharpSettings.LegacyJavascriptBindingEnabled = true;
             WebBrowser.RegisterJsObject("jsObj", new JsEvent(), new CefSharp.BindingOptions() { CamelCaseJavascriptNames = false }); //交互数据    
             WebBrowser.Dock = DockStyle.Fill;//铺满                                                                  
-                                             // this.Controls.Add(WebBrowser);//加入窗体
             this.panel3.Controls.Add(WebBrowser);//加入窗体
             //WebBrowserError = new ChromiumWebBrowser(Application.StartupPath + @"\assets\error.html"); //错误页                                                            
             //WebBrowserError.Dock = DockStyle.Fill;//铺满                                                                  
